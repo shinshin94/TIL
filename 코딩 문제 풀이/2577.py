@@ -1,0 +1,15 @@
+#3개의 자연수를 구하고 0~9까지 숫자가 몇개씩 들어갔는지 출력
+B = int(input("자연수2 : "))
+C = int(input("자연수3 : "))
+D = A*B*C
+D =list(str(D))
+print(D.count("0"))
+print(D.count("1"))
+print(D.count("2"))
+print(D.count("3"))
+print(D.count("4"))
+print(D.count("5"))
+print(D.count("6"))
+print(D.count("7"))
+print(D.count("8"))
+print(D.count("9"))
