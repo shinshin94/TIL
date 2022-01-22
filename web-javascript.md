@@ -794,6 +794,7 @@
 >       *  시간 부분 문자열로 변환하고 결과
 >
 >   * ```
+>     <span id="today"></span>
 >     <button>오늘날짜</button>
 >     ```
 >
@@ -814,6 +815,99 @@
 >     }
 >     ```
 >
+>   * 2022/1/21/금
+>
+>   * ```
+>     <span id="today"></span>
+>     <button>오늘날짜(표현)</button>
+>     ```
+>
+> * 특정 날짜 출력하기
+>
+>   * ```
+>     function testDate03(){
+>     	var year = 2022;
+>     	var month = 5;
+>     	var day = 13;
 >     
+>     	var date = new Date(year,month-1,day);
+>     
+>     	document.getElementById("specific").innerHTML="취업 :" + date;
+>     }
+>     ```
+>
+>   * 취업 :Fri May 13 2022 00:00:00 GMT+0900 (한국 표준시)
+>
+>   * ```
+>     함수 호출
+>     <span id="specific"></span>
+>     <button>특정 날짜</button>
+>     ```
+>
+> * 경과 날짜 출력하기
+>
+>   * ```
+>     function testDate04(){
+>     	var dates = document.getElementById("dates").value;
+>     	var inputDate = document.getElementById("inputdate").value;
+>     
+>     	var date = new Date(dates);
+>     
+>     	date.setDate(date.getDate() + parseInt(inputDate));
+>     
+>     	document.getElementById("result").value = 															date.toLocaleDateString();
+>     }
+>     ```
+>
+>   * 날짜를 정하고 입력받은 만큼 더해서 출력
+>
+>   *  ```
+>      입력과 함수 호출
+>      <label>지정 날짜</label>
+>      <input type="date" id="dates" size ="50"/>
+>      <br/>
+>      <label>경과일</label>
+>      <input type="number" id="inputdate"/>
+>      <br/>
+>      <label>경과 후 날짜</label>
+>      <input type="text" id="result" readonly="readonly"/>
+>      <button>경과 날짜</button>
+>      ```
+>
+> * D-day
+>
+>   * ```
+>     function testDate05(){
+>     	var dates02 = document.getElementById("dates02").value;
+>     	var inputDate02=document.getElementById("inputdate02").value;
+>     
+>     	var nowDate = new Date(dates02);
+>     	var afterDate = new Date(inputDate02);
+>     
+>     	var resultVal = (afterDate.getTime() - nowDate.getTime()) 													/(1000*60*60*24);
+>     
+>     	document.getElementById("result02").value = resultVal;
+>     }
+>     ```
+>
+>     * getTime() : milliseconds 
+>     * `(1000*60*60*24) =(초*분*초*일)`
+>
+>   * 시작 날짜와 종료 날짜를 정하고 남은 일수가 구해나옴
+>
+>   * ```
+>     <label>시작 날짜</label>
+>     <input type="date" id="dates02" size="50"/>
+>     <br/>
+>     <label>종료 날짜</label>
+>     <input type="date" id = "inputdate02" />
+>     <label>남은 일수</label>
+>     <input type="text" id="result02" readonly="readonly"/>
+>     <button>남은 일수 구하기</button>
+>     ```
+
+
+
+
 
  
