@@ -1288,36 +1288,7 @@
 
 > 체크박스 속성 사용법입니다 
 >
-> ```
-> <div id="base">
-> 	<from>
-> 		<input type="checkbox" name="all" onclick="allCheck(this.checked);"/>전체 선택<br/>
-> 
-> 		<input type="checkbox" name="chk" value="red"/>빨강<br/>
-> 		<input type="checkbox" name="chk" value="green"/>초록<br/>
-> 		<input type="checkbox" name="chk" value="blue"/>파랑<br/>
-> 		<input type="checkbox" name="chk" value="magenta"/>진홍<br/>
-> 
-> 		<input type="button" value="선택" onclick="selectColor();"/>
-> 		<input type="button" value="취소" onclick="clearDiv();"/>
->  	</from>
->  </div>
-> ```
->
-> 1. 체크박스 속성으로 "전체 선택", " 빨강", "초록", "파랑", "진홍"  총5개를 만듭니다
-> 2. "선택" 을 누를 시 selectColor 함수가 실행되는 버튼을 만듭니다.
-> 3. "취소"를 누를 시 clearDiv 함수가 실행되는 버튼을 만듭니다.
->
-> ```
-> <div id="colorbox">
-> 	<div id="red">red</div>
-> 	<div id="green">green</div>
-> 	<div id="blue">blue</div>
-> 	<div id="magenta">magenta</div>
-> </div>
-> ```
->
-> 1. 각 색깔별로 id값을 지정해줍니다.
+> * **스타일 지정입니다**
 >
 > ```
 > #colorbox{
@@ -1350,7 +1321,36 @@
 > 5. 진홍은 왼쪽과 위에서 160 떨어진곳입니다.
 > 6. 남은 레드는 처음부분입니다.
 >
-> * 체크박스에서 체크 후 or 전 선택시 실행되는 함수입니다.
+> * **체크박스 생성 밑 id,이름, 내용을 지정해줍니다**
+>
+> ```
+> <div id="colorbox">
+> 	<div id="red">red</div>
+> 	<div id="green">green</div>
+> 	<div id="blue">blue</div>
+> 	<div id="magenta">magenta</div>
+> </div>
+> <div id="base">
+> 	<from>
+> 		<input type="checkbox" name="all" onclick="allCheck(this.checked);"/>전체 선택<br/>
+> 
+> 		<input type="checkbox" name="chk" value="red"/>빨강<br/>
+> 		<input type="checkbox" name="chk" value="green"/>초록<br/>
+> 		<input type="checkbox" name="chk" value="blue"/>파랑<br/>
+> 		<input type="checkbox" name="chk" value="magenta"/>진홍<br/>
+> 
+> 		<input type="button" value="선택" onclick="selectColor();"/>
+> 		<input type="button" value="취소" onclick="clearDiv();"/>
+>  	</from>
+>  </div>
+> ```
+>
+> 1. 각 색깔별로 id값을 지정해줍니다.
+> 2. 체크박스 속성으로 "전체 선택", " 빨강", "초록", "파랑", "진홍"  총5개를 만듭니다
+> 3. "선택" 을 누를 시 selectColor 함수가 실행되는 버튼을 만듭니다.
+> 4. "취소"를 누를 시 clearDiv 함수가 실행되는 버튼을 만듭니다.
+>
+> * **체크박스에서 체크 후 or 전 선택시 실행되는 함수입니다.**
 >
 > ```
 > function selectColor(){
@@ -1371,7 +1371,7 @@
 > 3. if로 chks의 인덱스 값에 체크가 되어있다면 색상을 chks[i]의 내용으로 지정해줍니다
 > 4. else 는 색상 없습니다.
 >
-> * 전체 선택시 함수입니다
+> * **전체 선택시 함수입니다**
 >
 > ```
 > function allCheck(bool){
@@ -1387,7 +1387,7 @@
 > 2. 변수 chks에 이름 chk를 받아옵니다.
 > 3. for문을 사용해서 전부 체크값을 true or false로 바꿔줍니다. 이건 논리 맞습니다
 >
-> * 취소 함수입니다
+> * **취소 함수입니다**
 >
 > ```
 > function clearDiv(){
@@ -1403,5 +1403,84 @@
 > 1. allCheck 함수를 false 값으로 불러줍니다.
 > 2. 변수 colorbox에 selectorAll에 colorbox>div 를 넣어 가져옵니다. 자식
 > 3. for문에 colorbox의 길이를 넣고 길이만큼 colorbox[i]인덱스에 none으로 바꿔줍니다.
+
+## dom
+
+> * 그림 넘기기
+>
+>   * 스타일 지정
+>
+>   * ```
+>     <style>
+>     	a>img{width:50px; height: 50px;}
+>     	#gallery{width: 200px; height: 200px;}
+>     	p{width: 350px; height: 250px;}
+>     	img{vertical-align: middle;}
+>     	a{text-decoration: none;}
+>     </style>
+>     ```
+>
+>     * 크기와 높기 위치를 지정해줍니다
+>
+>   * 바디
+>
+>   * ```
+>     <div id="gallerywrap">
+>     	<p>
+>     		<a href="http://www.naver.com" onclick="return prevGallery();">
+>     			<img src="resources/imgs/arrowleft.png" alt="왼쪽화살표" />
+>     		</a>
+>     
+>     		<img id="gallery" src="resources/imgs/img01.png" alt="gallery">
+>     
+>     		<a href="#next" onclick="nextGallery();">
+>     		<img src="resources/imgs/arrowright.png" alt="오른화살표" />
+>     		</a>
+>     	</p>
+>     </div>
+>     ```
+>
+>     * 클릭시 prevGallery함수값을 return 받습니다.
+>       * 왼쪽 화살표 이미지입니다  주소값입니다
+>     * 가운데 출력될 이미지 입니다
+>     * 클릭시 nextGallery함수가 실행됩니다.
+>       * 오른쪽 화살표 이미지입니다 주소값입니다
+>
+>   * 함수
+>
+>   * ```
+>     var num =1;
+>     
+>     function prevGallery(){
+>     	num--;
+>     	if (num <1) {
+>     	num = 6;    
+>     	}
+>     	document.getElementById("gallery").src = "resources/imgs/img0"+num+".png";
+>     
+>     	return false; 
+>     }
+>     ```
+>
+>     * num--는 num = num-1과 같습니다 클릭시 전역변수 num의 값이 바뀝니다.
+>     * if문으로 num이 0이 될시 자신의 마지막 사진의 번호로 바뀌게 지정해줍니다.
+>     * id의 값 gallery에 출력될 이미지를 img num .png 파일로 바뀌게 해줍니다.
+>     * return을 false로 하여 값의 반환을 막습니다 다음 이벤트인 www.naver.com을 막힙니다.(요거 써보려고 넣음)
+>
+>   * ```
+>     function nextGallery(){
+>     	num++;
+>     	if (num >6) {
+>     	num = 1;    
+>     	}
+>     	document.getElementById("gallery").src = "resources/imgs/img0"+num+".png";
+>     
+>     	return 
+>     }
+>     ```
+>
+>   * 클릭시 전역변수 num값이 1씩 더해집니다
+>
+>   * 마찬가지로 id의 값 gallery에 출력될 이미지를 img num .png 파일로 바뀌게 해줍니다.
 
  
