@@ -1483,4 +1483,58 @@
 >
 >   * 마찬가지로 id의 값 gallery에 출력될 이미지를 img num .png 파일로 바뀌게 해줍니다.
 
- 
+## nodelist
+
+> * 부모 node, 자식 node 탐색
+>
+>   * ```
+>     <h1>부모탐색,자식탐색</h1>
+>     <div>
+>     	<p>child01</p>
+>     	<p>child02</p>
+>     	<p>child03</p>
+>     </div>
+>     
+>     <button onclick="searchPar();">부모탐색</button>
+>     <br/>
+>     <button onclick="searchChi();">자식탐색</button>
+>     ```
+>
+>   * 부모 탐색 함수
+>
+>     * ```
+>       function searchPar(){
+>       	var child02 = document.getElementsByTagName("p")[1];
+>       	var div = child02.parentNode;
+>       	alert(div);
+>       	alert(typeof(div));
+>       	alert(div.nodeName);
+>       	div.style.backgroundColor="violet";
+>       }
+>       ```
+>
+>       * p의 인덱스 1번을 변수 child02에 지정합니다
+>       * 변수 div = child02의 부모노드로 지정합니다.
+>       * objectHTMLDivElement 출력
+>       * 타입 object
+>       * node네임은 DIV
+>       * div위치에 색상 violet으로 바꿔줬습니다
+>
+>   * 자식 탐색 함수
+>
+>     * ```
+>       function searchChi() {
+>       	var div = document.getElementsByTagName("div")[0];
+>       
+>       	var divChildren = div.childNodes;
+>       	for (var i = 0;i<divChildren.length;i++){
+>       		console.log(divChildren[i].nodeName);
+>       	}
+>       }
+>       ```
+>
+>       * 변수 div는 div인덱스 0번째입니다
+>       * 변수 divChildren은 div자식노드들입니다
+>       * 콘솔에 자식노드들이 전부 나옵니다.
+>       * 자식노드들에는 공백도 포함되어있어 전체 길이는 7입니다. 
+
