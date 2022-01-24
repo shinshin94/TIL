@@ -74,7 +74,7 @@
 >
 > * ```
 >   var variable = 10; #전역변수
->       
+>           
 >   	function val01(){
 >   	variable=variable+5;   #지역변수 
 >   	document.getElementById("value01").innerHTML=
@@ -446,12 +446,12 @@
 >     function strTest01(){
 >     	var str01 = "String";
 >     	var str02 = "Test";
->     
+>         
 >     	var str03 = str01+ str02;
->     
+>         
 >     	var newString = str01.concat("Test","Java","Script");
 >     	//alert(newString);
->     
+>         
 >     	var joinTest = ["5","10","15","20"].join("+")
 >     	alert(joinTest);
 >     }
@@ -471,9 +471,9 @@
 >     function strTest02(){
 >     	var numVal = 12.5;
 >     	var bool = true;
->     
+>         
 >     	var result = "string" + numVal + bool;
->     
+>         
 >     	var result2 = "a" + 10 + 20;
 >     	alert(result2);
 >     }
@@ -493,43 +493,43 @@
 >     function strTest03(){
 >     	var str = prompt("이름을 입력하세요");
 >     	var span = document.getElementById("res");
->     
+>         
 >     	if (str == "멀캠"){
 >     	span.textContent = str + "님 환영합니다";
->     
+>         
 >     	} else if (str.toLowerCase() == "multicampus") {
 >     	span.textContent = str + ",Hello!";
->     
+>         
 >     	} else{
 >     	span.textContent = "이름을 다시 한번 확인해 주세요!!"
 >     	}
->     
+>         
 >     	// 자동 형변환
 >     	var numVal = 10;
 >     	if (numVal=="10") {
 >     	alert("== 연산자 사용 : 숫자 10 입니다.");
->     
+>         
 >     	} else {
 >     	alert("==연산자 사용 : 숫자 10이 아닙니다.");
 >     	}
->     
+>         
 >     	//=== : 엄격한 비교
 >     	if (numVal==="10") {
 >     	alert("=== 연산자 사용 : 숫자 10 입니다.");
->     
+>         
 >     	} else {
 >     	alert("===연산자 사용 : 숫자 10이 아닙니다.");
 >     	}
 >     	//문자열 객체
 >     	var strObj = new string("멀캠");
 >     	var strLiteral = "멀캠";
->     
+>         
 >     	if (strObj == strLiteral) {
 >     	alert("문자가 같습니다.");
 >     	} else {
 >     	alert("문자가 다릅니다.");
 >     	}
->     	
+>     	    
 >     	//객체와 값은 다름
 >     	if (strObj === strLiteral) {
 >     	alert("문자가 같습니다.===");	
@@ -549,7 +549,7 @@
 >   * ```
 >     함수
 >     function strTest04(){
->     
+>         
 >     	var strVal = "홍길동 이순신 유재석 강호동 홍길동";
 >     	var prop = prompt("검색할 이름을 입력해 주세요");
 >     	alert("indexOf : " + strVal.indexOf(prop));
@@ -577,7 +577,7 @@
 >     	var startIndex = strVal.indexOf(":");
 >     	var endIndex = strVal.lastIndexOf(",");
 >     	var res = strVal.substring(startIndex,endIndex);	
->     
+>         
 >     	var splitVal = strVal.split(" ");
 >     	alert(splitVal[1]);
 >     }
@@ -603,7 +603,7 @@
 >     	propResult+=propArr[i] + "<br/>";
 >     	}
 >     	document.getElementById("key").innerHTML=propResult;
->     
+>             
 >     }
 >     ```
 >
@@ -623,15 +623,15 @@
 >     	//literal 값 자체
 >     	var num01 = 3;
 >     	//alert(num01 + ":" + typeof(num01)) #숫자
->     
+>         
 >     	var num02 = new Number(3);
 >     	//alert(num02 + ":" + typeof(num02)); #객체형태
->     
+>         
 >     	//alert(parseInt("1")+1); #parseInt int형태로 바꿔줌
->     
+>         
 >     	// Not a Number
 >     	//alert(parseInt("a")+1);	#NaN  잘못된 입력
->     
+>         
 >     	var prop = prompt("숫자만 입력해 주세요");
 >     	if (isNaN(prop)) {			#IS함수 T/F로 반환
 >     	alert("숫자가 아닙니다");
@@ -651,14 +651,14 @@
 >   * ```
 >     함수
 >     function randomNum() {
->     
+>         
 >     	var hundred = Math.floor(Math.random() * 101); #0~100난수
->     
+>         
 >     	var min = 10;
 >     	var max = 100;
 >     	var ran = Math.floor(Math.random()*(max-min)+min); #10~100난수
 >     	alert(ran);
->     
+>         
 >     }
 >     ```
 >
@@ -677,10 +677,10 @@
 >   * ```
 >     함수
 >     function randomBG(){
->     
+>         
 >     	var rum = function(){
 >     	return Math.floor(Math.random()*256);
->     	
+>     	    
 >     	}
 >     	document.body.style.backgroundColor = "rgb(" + rum() + "," + 										rum() + "," + rum() + ")";
 >     }
@@ -701,10 +701,10 @@
 >     function randomCircle(){
 >     	var rnum = Math.floor(Math.random() * 200);
 >     	var circle = document.getElementById("circle");
->     
+>         
 >     	circle.style.width = rnum + "px";
 >     	circle.style.height = rnum + "px";
->     
+>         
 >     	circle.style.borderRadius = Math.floor(rnum/2) + "px";
 >     	circle.style.display = "block";
 >     }
@@ -726,19 +726,19 @@
 >     	var circleWidth=document.getElementById("circle").style.width;
 >     	#substring으로 난수값px에서 뒤의 문자열 "px"를 제거
 >     	var r2 = circleWidth.substring(0,circleWidth.length-2);
->     	
+>     	        
 >     	#alert(parseInt(circleWidth));이거로 가져오면 위에 두개 없이 간편
 >     		숫자만 가져옴
->     		
+>     		        
 >     	#반지름을 구하기 위해 반으로 나눔
 >     	var r = Math.floor(r2/2);
->     
+>             
 >     	alert(Math.PI*r*r);
 >     	//document.getElementById("area").innerHTML=
 >     	#⬆원의 넓이⬇				  Math.floor(Math.PI*r*r);
 >     	document.getElementById("area").innerHTML=
 >     								Math.floor(Math.PI*Math.pow(r,2));
->     
+>             
 >     	document.getElementById("len").innerHTML=
 >     	#원의 지름					  Math.floor(Math.PI*r2);
 >     
@@ -772,14 +772,14 @@
 >   * ```
 >     function testDate01(){
 >     	var inputDate = document.getElementById("today");
->     
+>         
 >     	var date = new Date();
->     
+>         
 >     	inputDate.innerHTML=date.toDateString()+"<br/>";
 >     	inputDate.innerHTML+=date.toLocaleDateString() + "<br/>";
 >     	inputDate.innerHTML+=date.toLocaleString() + "<br/>";
 >     	inputDate.innerHTML+=date.toLocaleTimeString() +"<br/>";
->     
+>         
 >     }
 >     ```
 >
@@ -808,9 +808,9 @@
 >     	var day = date.getDate();
 >     	var week = date.getDay(); //인덱스 값으로 나옴
 >     	var dayOfWeek = ["일","월","화","수","목","금","토"];
->     
+>         
 >     	document.getElementById("today").innerHTML = 									year+"/"+month+"/"+day+"/"+dayOfWeek[week];
->     
+>         
 >     	date.prn();
 >     }
 >     ```
@@ -829,9 +829,9 @@
 >     	var year = 2022;
 >     	var month = 5;
 >     	var day = 13;
->     
+>         
 >     	var date = new Date(year,month-1,day);
->     
+>         
 >     	document.getElementById("specific").innerHTML="취업 :" + date;
 >     }
 >     ```
@@ -850,11 +850,11 @@
 >     function testDate04(){
 >     	var dates = document.getElementById("dates").value;
 >     	var inputDate = document.getElementById("inputdate").value;
->     
+>         
 >     	var date = new Date(dates);
->     
+>         
 >     	date.setDate(date.getDate() + parseInt(inputDate));
->     
+>         
 >     	document.getElementById("result").value = 															date.toLocaleDateString();
 >     }
 >     ```
@@ -880,12 +880,12 @@
 >     function testDate05(){
 >     	var dates02 = document.getElementById("dates02").value;
 >     	var inputDate02=document.getElementById("inputdate02").value;
->     
+>             
 >     	var nowDate = new Date(dates02);
 >     	var afterDate = new Date(inputDate02);
->     
+>             
 >     	var resultVal = (afterDate.getTime() - nowDate.getTime()) 													/(1000*60*60*24);
->     
+>             
 >     	document.getElementById("result02").value = resultVal;
 >     }
 >     ```
@@ -906,8 +906,502 @@
 >     <button>남은 일수 구하기</button>
 >     ```
 
+## array
 
+> 배열 : 여러개의 값을 효과적으로 관리하는 객체
+>
+> * 비어있는 배열 만들기
+>
+>   * ```
+>     var arrayObj=new Array(5)
+>     ```
+>
+>     * 5칸짜리 빈공간을 만듬
+>     * 비어있는것의 인덱스를 찾을시 undefinded
+>
+> * 배열 만들기 
+>
+>   * ```
+>     var arrayObj = new Array(1,2,3,4,5)
+>     arrayobj[2] = 7; //인덱스의 값을 바꿀수도 있음
+>     ```
+>
+> * 다중 배열
+>
+>   * ```
+>     function multiArr(){
+>     	var len = 3; #배열의 크기를 정함
+>     	var arr = new Array(len); //크기만큼의 1차원 배열을 만듬
+>     	for (var i=0; i < arr.length;i++) {   //크기만큼의 2차원 배열을 만듬
+>     	arr[i] = new Array(len);
+>     	}
+>     }
+>     ```
+>
+>   * 반복문을 써서 간단히 2차원 배열을 만들수 있다
+>
+> * join 함수
+>
+>   * ```
+>     function joinTest(){
+>     	var nums = ['1','2',3,4,'5'];
+>     	var res = nums.join("+");
+>     	alert(eval(res));
+>     }
+>     ```
+>
+>     * join을 넣을시 사이에 join"+"가 들어간다
+>     * 자바스크립트는 자동으로 형변환을 해줘서 15가 된다
+>
+> * 정렬
+>
+>   * 문자 정렬 sort()
+>
+>     * ```
+>       function sortTest01(){
+>       	var arr = ['a','d','b','c'];
+>       	alert(arr);
+>       	arr.sort();
+>       	alert(arr);
+>       }
+>       ```
+>
+>     * 문자의 순서로 정렬된다
+>
+>   * 숫자 정렬 sort()
+>
+>     * ```
+>       function sortTest02(){
+>       	// 아무 함수도 넣지 않으면 ascii code 순으로 정렬된다
+>       	var arr = [1,2,6,11,3,65,21];
+>       	//alert(arr); 이대로 하면 아스키값
+>       	arr.sort(compareNum); //정렬함수 넣음
+>       	alert(arr);
+>       }
+>       ```
+>
+>     * 정렬함수
+>
+>     * ```
+>       function compareNum(a,b){
+>       	return a - b;
+>       }
+>       ```
+>
+>   * 거꾸로 정렬 reverse()
+>
+>     * ```
+>       function reverseTest(){
+>       	var arr = [19,2,3,6,22,100];
+>       	arr.sort(function(a,b){return a-b}) //먼저 정렬해줌
+>       	arr.reverse(); //역순으로 바꿔줌
+>       	alert(arr);
+>       }
+>       ```
+>
+> * queue
+>
+>   * push
+>
+>     * 내용을 순서대로 넣는다
+>
+>   * shift
+>
+>     * 맨앞의 것을뺀다
+>
+>   * pop
+>
+>     * 맨 뒤의것을 뺀다
+>
+>   * ```
+>     function pushAndShift(){
+>     	var queue = new Array();
+>     	queue.push("first"); # first 넣어줌
+>     	queue.push("third"); # third 넣어줌
+>     	alert(queue);	#출력 first,third
+>     	var a = queue.shift(); #맨앞의 first 빠짐
+>     	alert(a);	#first 확인
+>     	alert(queue);	#third 남음
+>     	queue.push('4th');	#4th 넣어줌
+>     	alert(queue);	#third,4th 출력
+>     	var b = queue.pop();	#4th빼줌
+>     	alert(b);	#빠진게 4th 맞는지 확인
+>     	alert(queue);	#third 출력
+>     }
+>     ```
+>
+> * slice
+>
+>   * 배열의 부분을 가지고 새로운 배열 생성
+>
+>   * ```
+>     function sliceTest(){
+>     	var arr01 = new Array(1,2,3,4,5,6,7);
+>     	var slice01 = arr01.slice(1,3);
+>     }
+>     ```
+>
+>   * 인덱스 (시작,끝-1) 로 잘라서 가져올수 있다
 
+## popup
 
+> open(경로,이름,옵션)
+>
+> ```
+> function popupTest(){
+> 	window.open("위치","이름","width=300px,height=300px");
+> }
+> ```
+
+## window
+
+> * 팝업창 만들기
+>
+>   * ```
+>     function openWin() {
+>     	var url = "위치";
+>     	var title = "이름";
+>     	var prop = "top=200px,left=600px,width=500px,height=500px";
+>     	window.open(url, title, prop); 
+>     }
+>     ```
+>
+>   * 위치의 내용
+>
+>     * ```
+>       function test(){
+>       	var val=document.getElementsByName("test")[0].value;
+>       	opener.document.getElementsByTagName("h1")[1].innerHTML=val;
+>       	close();
+>       }
+>       ```
+>
+>     * ```
+>       <input type="text" name="test"/>
+>       <input type="button" onclick="test()" value="전달"/>
+>       ```
+>
+>   * ```
+>     <h1>팝업창 만들기</h1>// 인덱스 값 1임
+>     <button onclick="openWin()" name="btn">창열기</button>
+>     ```
+>
+>     ```
+>     <iframe name="이름"></iframe> //문서안의 새로운 문서,새로운 영역
+>     ```
+>
+>     1. 클릭시 openWin 함수를 호출한다
+>     2. openWin에 정의된 속성값에 맞게 위치에 있는 내용을 불러온다 (이름부분에)
+>     3. 위치에 있는 함수에서 text를 입력할수 있다. 
+>     4. 전달 버튼을 누를시 opener 즉 원래 있던곳인 body의 <h1>의 인덱스값 1부분에 내용이 입력된다
+>
+> * 회원가입
+>
+>   * ```
+>     <h1>회원가입하기(div팝업창)</h1>
+>     <button onclick="registForm()" name="btn">회원가입</button>
+>     ```
+>
+>     1. 회원 가입을 누를시 registform 함수가 실행됩니다
+>
+>   * ```
+>     function registForm() {
+>     	document.getElementById("regist").style.display = "block";
+>     	document.body.style.background = "gray";
+>         
+>     	var btns = document.getElementsByName("btn");
+>     	for ( var i in btns) {				
+>     	btns[i].disabled = "disabled";
+>     	}
+>     }
+>     ```
+>
+>     1. Id값 regist를 불러오고 뒤에는 색상 회색으로 지정해줍니다
+>     2. 향상된 for 문을 사용하여 내용들을 불러옵니다. 내용에는 속성값 인덱스 전부 들어있습니다
+>     3. disabled를 사용해서 작동을 못하게 만들어줍니다
+>
+>   * ```
+>     <div id="regist">
+>     	<form>
+>     		<table>
+>     		<caption>회원가입</caption>
+>     		<tr>
+>     			<td>아이디</td>
+>     			<td><input type="text" name="id" onclick="idchk()" readonly="readonly" /> 
+>     				<input type="button" value="중복체크" onclick="idCheck()" /></td></tr>
+>     		<tr>
+>     			<td>패스워드</td>
+>     			<td><input type="password" name="pwd" style="color: red;"/></td>
+>     		</tr>
+>     		<tr>
+>     			<td colspan="2" align="center"><input type="button" value="확인" onclick="closeWin()" /></td>
+>     		</tr>
+>     		</table>
+>     	</form>
+>     </div>
+>     ```
+>
+>     1. 아이디 input은 text타입의 읽기 전용입니다. 그래서 누를시 idchk함수로 넘어갑니다
+>     2. 중복체크를 누를시 idchek함수로 넘어가는 버튼을 만들었습니다
+>     3. 패스워드는 타입 패스워드라서 입력시 가려줍니다 색상은 붉은색으로 입력됩니다
+>     4. 위치는 센터이며 확인 버튼을 누를시 closeWin함수가 실행됩니다.
+>
+>   * ```
+>     function closeWin() {
+>     	document.getElementById("regist").style.display = "none";
+>     	document.body.style.background = "white";
+>         
+>     	var btns = document.getElementsByName("btn");
+>     	for ( var i in btns) {
+>     	btns[i].disabled = "";
+>     	}
+>     }
+>     ```
+>
+>     1. 실행된 regist를 none으로 만듭니다.
+>     2. 백그라운드를 다시 흰색으로 돌립니다
+>     3. disabled로 사용을 막은것들을 다시 되돌립니다 
+>
+>   * ```
+>     function idchk() {
+>     	alert("중복체크를 확인하세요");
+>     }
+>     ```
+>
+>     1. 팝업창에 중복체크를 확인하세요 가 나옵니다.
+>
+>   * ```
+>     function idCheck() {
+>     	open("위치", "", "width=300px,height=300px");
+>     }
+>     ```
+>
+>     1. 위치의 내용을 불러옵니다.
+>     2. 불러올때 속성으로 가로 300px 높이 300px로 불러옵니다
+>
+>   * ```
+>     <table>
+>     	<tr>
+>     		<td>아이디</td>
+>     		<td><input type="text" name="id"/></td>
+>     	</tr>
+>     	<tr>
+>     		<td colspan="2">
+>     			<input type="button" value="중복확인" onclick="confirmChk()"/>
+>     			<input type="button" value="취소" onclick="self.close()"/>
+>     		</td>
+>     	</tr>
+>     </table>
+>     <div></div>
+>     ```
+>
+>     1. text타입에 name은 id입니다
+>     2. 중복확인을 누를시 confirmChk를 불러옵니다
+>     3. 취소를 누를시 닫기는 함수입니다
+>
+>   * ```
+>     var ids=["java","script"];
+>         
+>     function confirmChk(){
+>     	var id=document.getElementsByName("id")[0].value;
+>     	var div=document.getElementsByTagName("div")[0];
+>     	if(ids.indexOf(id)!=-1){
+>     		div.innerHTML="<b>아이디가 존재합니다.</b>";
+>     	}else{
+>     		var userId="사용할 수 있는 아이디입니다."
+>     			+"<input type='button' value='확인'"
+>     			+"onclick='insertId(\""+id+"\")'>"; //escape 시퀀스
+>     		div.innerHTML=userId;          
+>     	}
+>     }
+>     ```
+>
+>     1. 전역 변수로 ids 배열안에는 "java","script" 두개가 있습니다. 중복 아이디인지 확인용입니다.
+>
+>     2. 변수 id에 text로 입력했던 name id 값을 가져옵니다.
+>
+>     3. 변수 div에 div를 가져옵니다.
+>
+>     4. if문을 사용하여 전역 변수 ids배열에 가져온 id값이 있는지 확인합니다. 인덱스는 없을시 -1을 반환함
+>
+>        1. -1이외의 값일시 변수 div를 가져온 위치에 "아이디가 존재합니다" 출력
+>
+>     5. else일시 변수 userid에 "사용할 수 있는 아이디입니다 "
+>
+>        1. 새로운 input을 생성합니다. "확인" 버튼
+>
+>        2. 누를시 insertId함수에 "id" 를 넣어서 실행합니다. 
+>
+>        3. id는 변수가 아닌 문자열 형태 그대로 가져갑니다. *Escape Sequences*
+>
+>           ***Escape Sequences***란 프로그래밍 언어 특성상 표현할 수 없는 기능, 문자를 표현
+>
+>        4. 변수 div를 가져온곳에 userId의 내용을 출력합니다
+>
+>   * ```
+>     function insertId(id){
+>     	opener.document.getElementsByName("id")[0].value=id; 
+>     	opener.document.getElementsByName("pwd")[0].focus();
+>     	close(); 
+>     }
+>     ```
+>
+>     1. 창을 열었던곳의 네임 id(아이디에 readonly부분의 네임입니다) 에 값을 가져가줍니다. 내용은 문자열 "id" 의 값입니다
+>     2. 창을 열었던곳 밑에 패스워드 칸에 초점을 둡니다. 네임은 pwd였습니다.
+>     3. 그리고 현재 창을 닫습니다. 
+
+## location
+
+> * location.href
+>
+>   * ```
+>     location.href="http://www.naver.com";
+>     ```
+>
+>   * 지정한 경로로 이동합니다. 새로운 창이며 뒤로가기를 누를시 현재위치로 돌아옵니다
+>
+> * location.assign
+>
+>   * ```
+>     location.assign("http://www.google.com")
+>     ```
+>
+>   * 지정한 경로로 이동합니다.새로운 창이며 뒤로가기를 누를시 현재위치로 돌아옵니다
+>
+> * location.replace
+>
+>   * ```
+>     location.replace("http://www.naver.com")
+>     ```
+>
+>   * 지정한 경로로 이동합니다. 현재 창을 덮어쓰기 때문에 뒤로가기를 누를시 돌이킬수 없습니다.
+>
+> * location.reload()
+>
+>   * ```
+>     location.reload()
+>     ```
+>
+>   * 새로고침입니다.
+
+## check
+
+> 체크박스 속성 사용법입니다 
+>
+> ```
+> <div id="base">
+> 	<from>
+> 		<input type="checkbox" name="all" onclick="allCheck(this.checked);"/>전체 선택<br/>
+> 
+> 		<input type="checkbox" name="chk" value="red"/>빨강<br/>
+> 		<input type="checkbox" name="chk" value="green"/>초록<br/>
+> 		<input type="checkbox" name="chk" value="blue"/>파랑<br/>
+> 		<input type="checkbox" name="chk" value="magenta"/>진홍<br/>
+> 
+> 		<input type="button" value="선택" onclick="selectColor();"/>
+> 		<input type="button" value="취소" onclick="clearDiv();"/>
+>  	</from>
+>  </div>
+> ```
+>
+> 1. 체크박스 속성으로 "전체 선택", " 빨강", "초록", "파랑", "진홍"  총5개를 만듭니다
+> 2. "선택" 을 누를 시 selectColor 함수가 실행되는 버튼을 만듭니다.
+> 3. "취소"를 누를 시 clearDiv 함수가 실행되는 버튼을 만듭니다.
+>
+> ```
+> <div id="colorbox">
+> 	<div id="red">red</div>
+> 	<div id="green">green</div>
+> 	<div id="blue">blue</div>
+> 	<div id="magenta">magenta</div>
+> </div>
+> ```
+>
+> 1. 각 색깔별로 id값을 지정해줍니다.
+>
+> ```
+> #colorbox{
+> 	width: 320px;
+> 	height: 320px;
+> 	position: relative;
+> }
+> #red, #green, #blue, #magenta{
+> 	width: 150px;
+> 	height: 150px;
+> 	border: 1px solid black;
+> 	position: absolute;
+> }
+> #green{
+> 	left: 160px;
+> }
+> #blue{
+> 	top: 160px;
+> }
+> #magenta{
+> 	left: 160px;
+> 	top: 160px;
+> }
+> ```
+>
+> 1. colorbox기본틀은 가로 320px 세로 320px 부모틀입니다
+> 2. 빨강 그린 블루 진홍 가로 150px 세로 150px입니다 굵기는 1px고 위치는 부모의 기준에서 입니다
+> 3. 그린은 왼쪽에서 160px 떨어진곳입니다
+> 4. 파랑은 위에서 160px 떨어진곳입니다
+> 5. 진홍은 왼쪽과 위에서 160 떨어진곳입니다.
+> 6. 남은 레드는 처음부분입니다.
+>
+> * 체크박스에서 체크 후 or 전 선택시 실행되는 함수입니다.
+>
+> ```
+> function selectColor(){
+> 	var chks = document.getElementsByName("chk");
+> 
+> 	for (var i=0; i < chks.length;i++) {
+> 		if (chks[i].checked) {
+> 		document.getElementById(chks[i].value).style.backgroundColor = chks[i].value;
+> 		} else {
+> 		document.getElementById(chks[i].value).style.backgroundColor = '';
+> 		}
+> 	}
+> }
+> ```
+>
+> 1. 변수에 chk를 받아옵니다.
+> 2. for문으로 길이만큼 확인합니다. 무엇을?
+> 3. if로 chks의 인덱스 값에 체크가 되어있다면 색상을 chks[i]의 내용으로 지정해줍니다
+> 4. else 는 색상 없습니다.
+>
+> * 전체 선택시 함수입니다
+>
+> ```
+> function allCheck(bool){
+> 	var chks = document.getElementsByName("chk");
+> 
+> 	for (var i =0; i< chks.length; i++){
+> 	chks[i].checked = bool;
+> 	}
+> }
+> ```
+>
+> 1. allcheck(bool)의 bool 은 변수입니다 
+> 2. 변수 chks에 이름 chk를 받아옵니다.
+> 3. for문을 사용해서 전부 체크값을 true or false로 바꿔줍니다. 이건 논리 맞습니다
+>
+> * 취소 함수입니다
+>
+> ```
+> function clearDiv(){
+> 	allCheck(false);
+> 
+> 	var colorbox = document.querySelectorAll("#colorbox>div");
+> 	for (var i=0;i<colorbox.length;i++) {
+> 	colorbox[i].style.backgroundColor = "";
+> 	}
+> }
+> ```
+>
+> 1. allCheck 함수를 false 값으로 불러줍니다.
+> 2. 변수 colorbox에 selectorAll에 colorbox>div 를 넣어 가져옵니다. 자식
+> 3. for문에 colorbox의 길이를 넣고 길이만큼 colorbox[i]인덱스에 none으로 바꿔줍니다.
 
  
