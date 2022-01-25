@@ -74,7 +74,7 @@
 >
 > * ```
 >   var variable = 10; #전역변수
->                             
+>                               
 >   	function val01(){
 >   	variable=variable+5;   #지역변수 
 >   	document.getElementById("value01").innerHTML=
@@ -446,12 +446,12 @@
 >     function strTest01(){
 >     	var str01 = "String";
 >     	var str02 = "Test";
->                           
+>                             
 >     	var str03 = str01+ str02;
->                           
+>                             
 >     	var newString = str01.concat("Test","Java","Script");
 >     	//alert(newString);
->                           
+>                             
 >     	var joinTest = ["5","10","15","20"].join("+")
 >     	alert(joinTest);
 >     }
@@ -471,9 +471,9 @@
 >     function strTest02(){
 >     	var numVal = 12.5;
 >     	var bool = true;
->                           
+>                             
 >     	var result = "string" + numVal + bool;
->                           
+>                             
 >     	var result2 = "a" + 10 + 20;
 >     	alert(result2);
 >     }
@@ -493,43 +493,43 @@
 >     function strTest03(){
 >     	var str = prompt("이름을 입력하세요");
 >     	var span = document.getElementById("res");
->                           
+>                             
 >     	if (str == "멀캠"){
 >     	span.textContent = str + "님 환영합니다";
->                           
+>                             
 >     	} else if (str.toLowerCase() == "multicampus") {
 >     	span.textContent = str + ",Hello!";
->                           
+>                             
 >     	} else{
 >     	span.textContent = "이름을 다시 한번 확인해 주세요!!"
 >     	}
->                           
+>                             
 >     	// 자동 형변환
 >     	var numVal = 10;
 >     	if (numVal=="10") {
 >     	alert("== 연산자 사용 : 숫자 10 입니다.");
->                           
+>                             
 >     	} else {
 >     	alert("==연산자 사용 : 숫자 10이 아닙니다.");
 >     	}
->                           
+>                             
 >     	//=== : 엄격한 비교
 >     	if (numVal==="10") {
 >     	alert("=== 연산자 사용 : 숫자 10 입니다.");
->                           
+>                             
 >     	} else {
 >     	alert("===연산자 사용 : 숫자 10이 아닙니다.");
 >     	}
 >     	//문자열 객체
 >     	var strObj = new string("멀캠");
 >     	var strLiteral = "멀캠";
->                           
+>                             
 >     	if (strObj == strLiteral) {
 >     	alert("문자가 같습니다.");
 >     	} else {
 >     	alert("문자가 다릅니다.");
 >     	}
->     	                      
+>     	                        
 >     	//객체와 값은 다름
 >     	if (strObj === strLiteral) {
 >     	alert("문자가 같습니다.===");	
@@ -549,7 +549,7 @@
 >   * ```
 >     함수
 >     function strTest04(){
->                           
+>                             
 >     	var strVal = "홍길동 이순신 유재석 강호동 홍길동";
 >     	var prop = prompt("검색할 이름을 입력해 주세요");
 >     	alert("indexOf : " + strVal.indexOf(prop));
@@ -577,7 +577,7 @@
 >     	var startIndex = strVal.indexOf(":");
 >     	var endIndex = strVal.lastIndexOf(",");
 >     	var res = strVal.substring(startIndex,endIndex);	
->                           
+>                             
 >     	var splitVal = strVal.split(" ");
 >     	alert(splitVal[1]);
 >     }
@@ -603,7 +603,7 @@
 >     	propResult+=propArr[i] + "<br/>";
 >     	}
 >     	document.getElementById("key").innerHTML=propResult;
->                                                 
+>                                                     
 >     }
 >     ```
 >
@@ -623,15 +623,15 @@
 >     	//literal 값 자체
 >     	var num01 = 3;
 >     	//alert(num01 + ":" + typeof(num01)) #숫자
->                           
+>                             
 >     	var num02 = new Number(3);
 >     	//alert(num02 + ":" + typeof(num02)); #객체형태
->                           
+>                             
 >     	//alert(parseInt("1")+1); #parseInt int형태로 바꿔줌
->                           
+>                             
 >     	// Not a Number
 >     	//alert(parseInt("a")+1);	#NaN  잘못된 입력
->                           
+>                             
 >     	var prop = prompt("숫자만 입력해 주세요");
 >     	if (isNaN(prop)) {			#IS함수 T/F로 반환
 >     	alert("숫자가 아닙니다");
@@ -651,14 +651,14 @@
 >   * ```
 >     함수
 >     function randomNum() {
->                           
+>                             
 >     	var hundred = Math.floor(Math.random() * 101); #0~100난수
->                           
+>                             
 >     	var min = 10;
 >     	var max = 100;
 >     	var ran = Math.floor(Math.random()*(max-min)+min); #10~100난수
 >     	alert(ran);
->                           
+>                             
 >     }
 >     ```
 >
@@ -677,10 +677,10 @@
 >   * ```
 >     함수
 >     function randomBG(){
->                           
+>                             
 >     	var rum = function(){
 >     	return Math.floor(Math.random()*256);
->     	                      
+>     	                        
 >     	}
 >     	document.body.style.backgroundColor = "rgb(" + rum() + "," + 										rum() + "," + rum() + ")";
 >     }
@@ -701,10 +701,10 @@
 >     function randomCircle(){
 >     	var rnum = Math.floor(Math.random() * 200);
 >     	var circle = document.getElementById("circle");
->                           
+>                             
 >     	circle.style.width = rnum + "px";
 >     	circle.style.height = rnum + "px";
->                           
+>                             
 >     	circle.style.borderRadius = Math.floor(rnum/2) + "px";
 >     	circle.style.display = "block";
 >     }
@@ -726,19 +726,19 @@
 >     	var circleWidth=document.getElementById("circle").style.width;
 >     	#substring으로 난수값px에서 뒤의 문자열 "px"를 제거
 >     	var r2 = circleWidth.substring(0,circleWidth.length-2);
->     	                                            
+>     	                                                
 >     	#alert(parseInt(circleWidth));이거로 가져오면 위에 두개 없이 간편
 >     		숫자만 가져옴
->     		                                            
+>     		                                                
 >     	#반지름을 구하기 위해 반으로 나눔
 >     	var r = Math.floor(r2/2);
->                                                 
+>                                                     
 >     	alert(Math.PI*r*r);
 >     	//document.getElementById("area").innerHTML=
 >     	#⬆원의 넓이⬇				  Math.floor(Math.PI*r*r);
 >     	document.getElementById("area").innerHTML=
 >     								Math.floor(Math.PI*Math.pow(r,2));
->                                                 
+>                                                     
 >     	document.getElementById("len").innerHTML=
 >     	#원의 지름					  Math.floor(Math.PI*r2);
 >     
@@ -772,14 +772,14 @@
 >   * ```
 >     function testDate01(){
 >     	var inputDate = document.getElementById("today");
->                           
+>                             
 >     	var date = new Date();
->                           
+>                             
 >     	inputDate.innerHTML=date.toDateString()+"<br/>";
 >     	inputDate.innerHTML+=date.toLocaleDateString() + "<br/>";
 >     	inputDate.innerHTML+=date.toLocaleString() + "<br/>";
 >     	inputDate.innerHTML+=date.toLocaleTimeString() +"<br/>";
->                           
+>                             
 >     }
 >     ```
 >
@@ -808,9 +808,9 @@
 >     	var day = date.getDate();
 >     	var week = date.getDay(); //인덱스 값으로 나옴
 >     	var dayOfWeek = ["일","월","화","수","목","금","토"];
->                           
+>                             
 >     	document.getElementById("today").innerHTML = 									year+"/"+month+"/"+day+"/"+dayOfWeek[week];
->                           
+>                             
 >     	date.prn();
 >     }
 >     ```
@@ -829,9 +829,9 @@
 >     	var year = 2022;
 >     	var month = 5;
 >     	var day = 13;
->                           
+>                             
 >     	var date = new Date(year,month-1,day);
->                           
+>                             
 >     	document.getElementById("specific").innerHTML="취업 :" + date;
 >     }
 >     ```
@@ -850,11 +850,11 @@
 >     function testDate04(){
 >     	var dates = document.getElementById("dates").value;
 >     	var inputDate = document.getElementById("inputdate").value;
->                           
+>                             
 >     	var date = new Date(dates);
->                           
+>                             
 >     	date.setDate(date.getDate() + parseInt(inputDate));
->                           
+>                             
 >     	document.getElementById("result").value = 															date.toLocaleDateString();
 >     }
 >     ```
@@ -880,12 +880,12 @@
 >     function testDate05(){
 >     	var dates02 = document.getElementById("dates02").value;
 >     	var inputDate02=document.getElementById("inputdate02").value;
->                                                 
+>                                                     
 >     	var nowDate = new Date(dates02);
 >     	var afterDate = new Date(inputDate02);
->                                                 
+>                                                     
 >     	var resultVal = (afterDate.getTime() - nowDate.getTime()) 													/(1000*60*60*24);
->                                                 
+>                                                     
 >     	document.getElementById("result02").value = resultVal;
 >     }
 >     ```
@@ -1108,7 +1108,7 @@
 >     function registForm() {
 >     	document.getElementById("regist").style.display = "block";
 >     	document.body.style.background = "gray";
->                                             
+>                                                 
 >     	var btns = document.getElementsByName("btn");
 >     	for ( var i in btns) {				
 >     	btns[i].disabled = "disabled";
@@ -1150,7 +1150,7 @@
 >     function closeWin() {
 >     	document.getElementById("regist").style.display = "none";
 >     	document.body.style.background = "white";
->                                             
+>                                                 
 >     	var btns = document.getElementsByName("btn");
 >     	for ( var i in btns) {
 >     	btns[i].disabled = "";
@@ -1201,7 +1201,7 @@
 >
 >   * ```
 >     var ids=["java","script"];
->                                             
+>                                                 
 >     function confirmChk(){
 >     	var id=document.getElementsByName("id")[0].value;
 >     	var div=document.getElementsByTagName("div")[0];
@@ -1430,9 +1430,9 @@
 >     		<a href="http://www.naver.com" onclick="return prevGallery();">
 >     			<img src="resources/imgs/arrowleft.png" alt="왼쪽화살표" />
 >     		</a>
->                                         
+>                                             
 >     		<img id="gallery" src="resources/imgs/img01.png" alt="gallery">
->                                         
+>                                             
 >     		<a href="#next" onclick="nextGallery();">
 >     		<img src="resources/imgs/arrowright.png" alt="오른화살표" />
 >     		</a>
@@ -1450,14 +1450,14 @@
 >
 >   * ```
 >     var num =1;
->                                         
+>                                             
 >     function prevGallery(){
 >     	num--;
 >     	if (num <1) {
 >     	num = 6;    
 >     	}
 >     	document.getElementById("gallery").src = "resources/imgs/img0"+num+".png";
->                                         
+>                                             
 >     	return false; 
 >     }
 >     ```
@@ -1474,7 +1474,7 @@
 >     	num = 1;    
 >     	}
 >     	document.getElementById("gallery").src = "resources/imgs/img0"+num+".png";
->                                         
+>                                             
 >     	return 
 >     }
 >     ```
@@ -1494,7 +1494,7 @@
 >     	<p>child02</p>
 >     	<p>child03</p>
 >     </div>
->                                         
+>                                             
 >     <button onclick="searchPar();">부모탐색</button>
 >     <br/>
 >     <button onclick="searchChi();">자식탐색</button>
@@ -1525,7 +1525,7 @@
 >     * ```
 >       function searchChi() {
 >       	var div = document.getElementsByTagName("div")[0];
->                                                             
+>                                                                   
 >       	var divChildren = div.childNodes;
 >       	for (var i = 0;i<divChildren.length;i++){
 >       		console.log(divChildren[i].nodeName);
@@ -1549,7 +1549,7 @@
 >   * ```
 >     function elementCreate(){
 >     	var div = document.createElement("div");        
->                     
+>                       
 >     	var attr = document.createAttribute("style");      
 >     	attr.nodeValue = "border:2px solid blue";             
 >     	div.setAttributeNode(attr);  
@@ -1571,7 +1571,7 @@
 >     function elementCreate(){
 >     	var div = document.createElement("div");  
 >     	div.setAttribute("style","border:2px solid red;")
->                     
+>                       
 >     	var txt = document.createTextNode("엘리먼트 생성!!");
 >     	div.appendChild(txt); 
 >     	document.body.appendChild(div);
@@ -1623,10 +1623,10 @@
 >       <input type="radio" name="rdobtn" value="img01.png"/>img01<br/>
 >       <input type="radio" name="rdobtn" value="img02.png"/>img02<br/>
 >       <input type="radio" name="rdobtn" value="img03.png"/>img03<br/>
->             
+>               
 >       <button onclick="createImg();">이미지 생성</button>
 >       <button onclick="deleteImg();">이미지 삭제</button>
->             
+>               
 >       <div id="imgview"><img src="" /></div>
 >     </body>
 >     ```
@@ -1644,17 +1644,17 @@
 >   * ```
 >     function createImg(){
 >     	var radios = document.getElementsByName("rdobtn");
->             
+>               
 >     	var radioVal=""; 
 >     	for (var i=0; i< radios.length;i++) {
 >     		if (radios[i].checked) {
 >     			radioVal = "resources/imgs/" + radios[i].value;
 >     		}
 >     	}
->             
+>               
 >     	var img = document.createElement("img");
 >     	img.setAttribute("src",radioVal);
->             
+>               
 >     	var div = document.getElementById("imgview");
 >     	var chd = document.querySelector("#imgview > img");
 >     	div.replaceChild(img,chd);
@@ -1696,13 +1696,13 @@
 >
 > * ```
 >   <body>
->               
+>                 
 >       <h1>태그 추가하기</h1>
->           
+>             
 >       <button onclick="addAppend();">appendChild()</button>
 >       <button onclick="addInsert();">insertBefore()</button>
 >       <button onclick="moveElement();">element 이동</button>
->           
+>             
 >       <fieldset id="addele">
 >           <legend>부모태그</legend>
 >           <div>div</div>
@@ -1723,9 +1723,9 @@
 >     function addAppend() {
 >     	var fieldset = document.getElementById("addele");
 >     	var p = document.createElement("p");
->             
+>               
 >     	p.textContent = "자식 태그들 중 가장 마지막에 넣어진다.";
->             
+>               
 >     	fieldset.appendChild(p);
 >     }
 >     ```
@@ -1745,9 +1745,9 @@
 >     function addInsert(){
 >     	var newP = document.createElement("p");
 >     	var fieldset = document.getElementById("addele");
->             
+>               
 >     	newP.textContent = "엘리먼트의 앞에 넣어진다." + (count++);
->             
+>               
 >     	var oldDiv = document.querySelector("fieldset > div");
 >     	fieldset.insertBefore(newP,oldDiv);
 >     }
@@ -1770,7 +1770,7 @@
 >     	var moveEle = document.querySelector("fieldset").children[1];
 >     	var addEle = document.body;
 >     	addEle.appendChild(moveEle);
->                     
+>                         
 >     }
 >     ```
 >
@@ -1784,7 +1784,7 @@
 >
 >   * ````
 >     <body>
->   
+>     
 >         <form>
 >             <table id="intable">
 >                 <tr>
@@ -1846,14 +1846,14 @@
 >     function tableVal(){
 >     	var doc = document.forms[0];
 >     	var vals = [doc.id.value, doc.pw.value, doc.addr.value, doc.phone.value]
->     
+>       
 >     	for (var i=0; i < vals.length;i++) {
 >     	if(vals[i] == null || vals[i] =="" || vals[i] == undefined){
 >     		alert("제대로 입력했는지 다시 한번 확인해주세요!");
 >     		return;
 >     		}
 >     	}
->     
+>       
 >     	document.getElementById("addtr").appendChild(createRow(vals));
 >     }
 >     ```
@@ -1873,13 +1873,13 @@
 >   * ```
 >     function createRow(vals){
 >     	var tr = document.createElement("tr");
->     
+>         
 >     	for (var i = 0; i < vals.length; i++){
 >     		var td = document.createElement("td");
 >     		td.textContent = vals[i];
 >     		tr.appendChild(td)
 >     	}
->     
+>         
 >     	var deleteTd=document.createElement("td");
 >     	deleteTd.innerHTML = "<input type='button' value='삭제' onclick ='delRow(this)'>";
 >     	tr.appendChild(deleteTd);
@@ -1901,7 +1901,7 @@
 >
 >   * ```
 >     function delRow(ele){
->     
+>       
 >     	var delTr = ele.parentNode.parentNode;
 >     	var tbody = document.getElementById("addtr");	
 >     	tbody.removeChild(delTr);
@@ -1917,7 +1917,7 @@
 >   * ```
 >             function deleteAll(){
 >                 var tbody = document.getElementById("addtr");
->     
+>         
 >                 while(tbody.hasChildNodes()){
 >                     tbody.removeChild(tbody.lastChild);
 >                 }
@@ -1927,4 +1927,148 @@
 >     1. 변수 tbody 에 id addtr을 받아옵니다.
 >     2. while문으로 tbody(addtr)의 자식노드(tr)들을 선택해줍니다.
 >     3. tbody(addtr)의 마지막 자식(tr)부터 차례대로 지워줍니다. 전부 사라질때까지
+
+## ajax
+
+> ​    Asynchronous Javascript And Xml
+>
+> ​    비 동기 통신입니다
+>
+> ​    서버와 클라이언트가 동기가 아닌 클라이언트에서 서버 몰래 가져옵니다
+>
+> ​    요청하고 기다리지 않습니다.
+>
+> |  ⬇➡  |   readState   |  ⬇➡  |         status         |
+> | :--: | :-----------: | :--: | :--------------------: |
+> |  0   | uninitialized | 200  |          성공          |
+> |  1   |    loading    | 400  |      bad request       |
+> |  2   |    loaded     | 401  |      unauthorized      |
+> |  3   |  interactive  | 403  |       forbidden        |
+> |  4   |   complete    | 404  |       not found        |
+> |      |               | 415  | unsupported media type |
+> |      |               | 500  | internal server error  |
+>
+> ex) 요청시 내용을 가져옵니다
+>
+> * body입니다.
+>
+>   * ```
+>     <body>
+>   
+>         <button onclick="ajaxTest();">ajax</button>
+>   
+>         <table id="tb" border="1"></table>
+>   
+>     </body>
+>     ```
+>
+>     1. "ajax"버튼을 누르면 함수 ajaxTest가 실행됩니다.
+>     2. table 의 id는 tb입니다.
+>
+> * ajaxTest함수입니다.
+>
+>   * ```
+>     function ajaxTest(){
+>     	var xhr = new XMLHttpRequest();
+>     	xhr.onreadystatechange = function(){
+>     		if(xhr.readyState == 4) {
+>     			if (xhr.status == 200){
+>     				var respXml = xhr.responseXML;
+>                     var table = document.getElementById('tb');
+>                     var rows = respXml.getElementsByTagName('ROW');
+>                     var columnTr = document.createElement("tr");
+>                     for (var i = 0; i < rows[0].children.length;i++) {                					
+>                     	var th = document.createElement("th");
+>             			th.appendChild(document.createTextNode(rows[0].children[i].nodeName));
+>     					columnTr.appendChild(th);
+>     				}
+>     				table.appendChild(tr);
+>     ```
+>
+>     1.  변수 xhr에 새로운 XMLhttp를 요청을 만듭니다.1️⃣
+>
+>     2.  xhr의 이벤트가 발생해 변화할때 즉시 실행되는 함수입니다.1️⃣
+>
+>        1.  함수 내용은 만약 xhr.state가 4(완료)일시2️⃣
+>
+>           1. 만약 xhr.status 가 200(성공)이면3️⃣
+>
+>              1. 변수 respXml은 xhr.responseXML입니다.4️⃣
+>
+>              2. 변수 table은 id중에 tb를 받아옵니다.4️⃣
+>
+>              3. 변수 rows는 respXml에서 태그 네임중 "row"를 받아옵니다.4️⃣
+>
+>              4. 변수 columnTr에 새로운 tr을 만듭니다.4️⃣
+>
+>              5. for반복문 rows의 0번째 인덱스의 자식 노드들 길이만큼의 범위로 지정해줍니다.4️⃣
+>
+>                 1. 변수 th에 새로운 th를 만들어 줍니다.5️⃣
+>                 2. rows의 자식노드[i]번째의 자식이름을 text로 적어서 만든후에 th에  추가해줍니다.5️⃣
+>                 3. columnTr(tr)에 추가합니다 만든 th를5️⃣
+>
+>              6.  table(tb)에 tr을 추가합니다.4️⃣
+>
+>                 *기본 틀인 열을 완성했습니다*
+>
+>   * ```
+>     							for (var i=0; i<rows.length;i++){
+>       					var tr = document.createElement("tr");
+>       					for (var j=0;j<rows[i].children.length;j++){
+>       						var td=document.createElement("td");
+>       						td.appendChild(document.createTextNode(rows[i].children[j].textContent));
+>       						tr.appendChild(td);
+>       					}
+>       					table.appendChild(tr);
+>       				}
+>       			}
+>       		}
+>     
+>       		}
+>       		xhr.open('GET','불러올.xml');
+>       		xhr.send();
+>     } 
+>     ```
+>
+>     ​						7.for반복문 i=0이고  rows길이만큼 1씩추가되며  실행합니다.4️⃣
+>
+>     ​								1.변수 tr에 새로운 tr을 만듬5️⃣
+>
+>     ​								2.for 반복문 j=0이고 rows[i]의 자식노드 길이만큼 1씩 추가되며 실행합니다.5️⃣
+>
+>     ​										1.변수 td에 새로운 td생성됩니다.6️⃣
+>
+>     ​										2.td에 추가됩니다. 새롭게 txt node로 rows[i]번째.자식[j]번째의 text 내용이6️⃣
+>
+>     ​										3.tr에 td를 추가합니다.6️⃣
+>
+>     ​								3.table(tb)에 입력된tr의 내용을 추가합니다.5️⃣
+>
+>     ​						*i의  for문이 닫히면서 기본 틀인 열 밑에 내용들이 추가됩니다.*4️⃣
+>
+>     ​				*닫힘*3️⃣
+>
+>     ​			*닫힘*2️⃣
+>
+>     ​		*닫힘* 1️⃣
+>
+>     ​		xhr을 열고 post를 GET방식으로 emplist.xml의 내용들을 불러옵니다.1️⃣
+>
+>     ​		xhr을 보냅니다.1️⃣
+>
+>     *완전닫힘*
+>
+> * 불러올.xml 내용 형식
+>
+>   * ```
+>     <?xml version="1.0" encoding="UTF-8"?>
+>     <ROWSET>
+>       <ROW>
+>         <EMPLOYEE_ID>100</EMPLOYEE_ID>
+>         <LAST_NAME>King</LAST_NAME>
+>         <EMAIL>Super</EMAIL>
+>         <PHONE_NUMBER>123.123.4567</PHONE_NUMBER>
+>         <HIRE_DATE>1994. 2. 20 오전 12:00:00</HIRE_DATE>
+>       </ROW>
+>     ```
 
