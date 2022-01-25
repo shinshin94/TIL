@@ -74,7 +74,7 @@
 >
 > * ```
 >   var variable = 10; #전역변수
->                     
+>                             
 >   	function val01(){
 >   	variable=variable+5;   #지역변수 
 >   	document.getElementById("value01").innerHTML=
@@ -446,12 +446,12 @@
 >     function strTest01(){
 >     	var str01 = "String";
 >     	var str02 = "Test";
->                   
+>                           
 >     	var str03 = str01+ str02;
->                   
+>                           
 >     	var newString = str01.concat("Test","Java","Script");
 >     	//alert(newString);
->                   
+>                           
 >     	var joinTest = ["5","10","15","20"].join("+")
 >     	alert(joinTest);
 >     }
@@ -471,9 +471,9 @@
 >     function strTest02(){
 >     	var numVal = 12.5;
 >     	var bool = true;
->                   
+>                           
 >     	var result = "string" + numVal + bool;
->                   
+>                           
 >     	var result2 = "a" + 10 + 20;
 >     	alert(result2);
 >     }
@@ -493,43 +493,43 @@
 >     function strTest03(){
 >     	var str = prompt("이름을 입력하세요");
 >     	var span = document.getElementById("res");
->                   
+>                           
 >     	if (str == "멀캠"){
 >     	span.textContent = str + "님 환영합니다";
->                   
+>                           
 >     	} else if (str.toLowerCase() == "multicampus") {
 >     	span.textContent = str + ",Hello!";
->                   
+>                           
 >     	} else{
 >     	span.textContent = "이름을 다시 한번 확인해 주세요!!"
 >     	}
->                   
+>                           
 >     	// 자동 형변환
 >     	var numVal = 10;
 >     	if (numVal=="10") {
 >     	alert("== 연산자 사용 : 숫자 10 입니다.");
->                   
+>                           
 >     	} else {
 >     	alert("==연산자 사용 : 숫자 10이 아닙니다.");
 >     	}
->                   
+>                           
 >     	//=== : 엄격한 비교
 >     	if (numVal==="10") {
 >     	alert("=== 연산자 사용 : 숫자 10 입니다.");
->                   
+>                           
 >     	} else {
 >     	alert("===연산자 사용 : 숫자 10이 아닙니다.");
 >     	}
 >     	//문자열 객체
 >     	var strObj = new string("멀캠");
 >     	var strLiteral = "멀캠";
->                   
+>                           
 >     	if (strObj == strLiteral) {
 >     	alert("문자가 같습니다.");
 >     	} else {
 >     	alert("문자가 다릅니다.");
 >     	}
->     	              
+>     	                      
 >     	//객체와 값은 다름
 >     	if (strObj === strLiteral) {
 >     	alert("문자가 같습니다.===");	
@@ -549,7 +549,7 @@
 >   * ```
 >     함수
 >     function strTest04(){
->                   
+>                           
 >     	var strVal = "홍길동 이순신 유재석 강호동 홍길동";
 >     	var prop = prompt("검색할 이름을 입력해 주세요");
 >     	alert("indexOf : " + strVal.indexOf(prop));
@@ -577,7 +577,7 @@
 >     	var startIndex = strVal.indexOf(":");
 >     	var endIndex = strVal.lastIndexOf(",");
 >     	var res = strVal.substring(startIndex,endIndex);	
->                   
+>                           
 >     	var splitVal = strVal.split(" ");
 >     	alert(splitVal[1]);
 >     }
@@ -603,7 +603,7 @@
 >     	propResult+=propArr[i] + "<br/>";
 >     	}
 >     	document.getElementById("key").innerHTML=propResult;
->                                 
+>                                                 
 >     }
 >     ```
 >
@@ -623,15 +623,15 @@
 >     	//literal 값 자체
 >     	var num01 = 3;
 >     	//alert(num01 + ":" + typeof(num01)) #숫자
->                   
+>                           
 >     	var num02 = new Number(3);
 >     	//alert(num02 + ":" + typeof(num02)); #객체형태
->                   
+>                           
 >     	//alert(parseInt("1")+1); #parseInt int형태로 바꿔줌
->                   
+>                           
 >     	// Not a Number
 >     	//alert(parseInt("a")+1);	#NaN  잘못된 입력
->                   
+>                           
 >     	var prop = prompt("숫자만 입력해 주세요");
 >     	if (isNaN(prop)) {			#IS함수 T/F로 반환
 >     	alert("숫자가 아닙니다");
@@ -651,14 +651,14 @@
 >   * ```
 >     함수
 >     function randomNum() {
->                   
+>                           
 >     	var hundred = Math.floor(Math.random() * 101); #0~100난수
->                   
+>                           
 >     	var min = 10;
 >     	var max = 100;
 >     	var ran = Math.floor(Math.random()*(max-min)+min); #10~100난수
 >     	alert(ran);
->                   
+>                           
 >     }
 >     ```
 >
@@ -677,10 +677,10 @@
 >   * ```
 >     함수
 >     function randomBG(){
->                   
+>                           
 >     	var rum = function(){
 >     	return Math.floor(Math.random()*256);
->     	              
+>     	                      
 >     	}
 >     	document.body.style.backgroundColor = "rgb(" + rum() + "," + 										rum() + "," + rum() + ")";
 >     }
@@ -701,10 +701,10 @@
 >     function randomCircle(){
 >     	var rnum = Math.floor(Math.random() * 200);
 >     	var circle = document.getElementById("circle");
->                   
+>                           
 >     	circle.style.width = rnum + "px";
 >     	circle.style.height = rnum + "px";
->                   
+>                           
 >     	circle.style.borderRadius = Math.floor(rnum/2) + "px";
 >     	circle.style.display = "block";
 >     }
@@ -726,19 +726,19 @@
 >     	var circleWidth=document.getElementById("circle").style.width;
 >     	#substring으로 난수값px에서 뒤의 문자열 "px"를 제거
 >     	var r2 = circleWidth.substring(0,circleWidth.length-2);
->     	                            
+>     	                                            
 >     	#alert(parseInt(circleWidth));이거로 가져오면 위에 두개 없이 간편
 >     		숫자만 가져옴
->     		                            
+>     		                                            
 >     	#반지름을 구하기 위해 반으로 나눔
 >     	var r = Math.floor(r2/2);
->                                 
+>                                                 
 >     	alert(Math.PI*r*r);
 >     	//document.getElementById("area").innerHTML=
 >     	#⬆원의 넓이⬇				  Math.floor(Math.PI*r*r);
 >     	document.getElementById("area").innerHTML=
 >     								Math.floor(Math.PI*Math.pow(r,2));
->                                 
+>                                                 
 >     	document.getElementById("len").innerHTML=
 >     	#원의 지름					  Math.floor(Math.PI*r2);
 >     
@@ -772,14 +772,14 @@
 >   * ```
 >     function testDate01(){
 >     	var inputDate = document.getElementById("today");
->                   
+>                           
 >     	var date = new Date();
->                   
+>                           
 >     	inputDate.innerHTML=date.toDateString()+"<br/>";
 >     	inputDate.innerHTML+=date.toLocaleDateString() + "<br/>";
 >     	inputDate.innerHTML+=date.toLocaleString() + "<br/>";
 >     	inputDate.innerHTML+=date.toLocaleTimeString() +"<br/>";
->                   
+>                           
 >     }
 >     ```
 >
@@ -808,9 +808,9 @@
 >     	var day = date.getDate();
 >     	var week = date.getDay(); //인덱스 값으로 나옴
 >     	var dayOfWeek = ["일","월","화","수","목","금","토"];
->                   
+>                           
 >     	document.getElementById("today").innerHTML = 									year+"/"+month+"/"+day+"/"+dayOfWeek[week];
->                   
+>                           
 >     	date.prn();
 >     }
 >     ```
@@ -829,9 +829,9 @@
 >     	var year = 2022;
 >     	var month = 5;
 >     	var day = 13;
->                   
+>                           
 >     	var date = new Date(year,month-1,day);
->                   
+>                           
 >     	document.getElementById("specific").innerHTML="취업 :" + date;
 >     }
 >     ```
@@ -850,11 +850,11 @@
 >     function testDate04(){
 >     	var dates = document.getElementById("dates").value;
 >     	var inputDate = document.getElementById("inputdate").value;
->                   
+>                           
 >     	var date = new Date(dates);
->                   
+>                           
 >     	date.setDate(date.getDate() + parseInt(inputDate));
->                   
+>                           
 >     	document.getElementById("result").value = 															date.toLocaleDateString();
 >     }
 >     ```
@@ -880,12 +880,12 @@
 >     function testDate05(){
 >     	var dates02 = document.getElementById("dates02").value;
 >     	var inputDate02=document.getElementById("inputdate02").value;
->                                 
+>                                                 
 >     	var nowDate = new Date(dates02);
 >     	var afterDate = new Date(inputDate02);
->                                 
+>                                                 
 >     	var resultVal = (afterDate.getTime() - nowDate.getTime()) 													/(1000*60*60*24);
->                                 
+>                                                 
 >     	document.getElementById("result02").value = resultVal;
 >     }
 >     ```
@@ -1108,7 +1108,7 @@
 >     function registForm() {
 >     	document.getElementById("regist").style.display = "block";
 >     	document.body.style.background = "gray";
->                             
+>                                             
 >     	var btns = document.getElementsByName("btn");
 >     	for ( var i in btns) {				
 >     	btns[i].disabled = "disabled";
@@ -1150,7 +1150,7 @@
 >     function closeWin() {
 >     	document.getElementById("regist").style.display = "none";
 >     	document.body.style.background = "white";
->                             
+>                                             
 >     	var btns = document.getElementsByName("btn");
 >     	for ( var i in btns) {
 >     	btns[i].disabled = "";
@@ -1201,7 +1201,7 @@
 >
 >   * ```
 >     var ids=["java","script"];
->                             
+>                                             
 >     function confirmChk(){
 >     	var id=document.getElementsByName("id")[0].value;
 >     	var div=document.getElementsByTagName("div")[0];
@@ -1430,9 +1430,9 @@
 >     		<a href="http://www.naver.com" onclick="return prevGallery();">
 >     			<img src="resources/imgs/arrowleft.png" alt="왼쪽화살표" />
 >     		</a>
->                         
+>                                         
 >     		<img id="gallery" src="resources/imgs/img01.png" alt="gallery">
->                         
+>                                         
 >     		<a href="#next" onclick="nextGallery();">
 >     		<img src="resources/imgs/arrowright.png" alt="오른화살표" />
 >     		</a>
@@ -1450,14 +1450,14 @@
 >
 >   * ```
 >     var num =1;
->                         
+>                                         
 >     function prevGallery(){
 >     	num--;
 >     	if (num <1) {
 >     	num = 6;    
 >     	}
 >     	document.getElementById("gallery").src = "resources/imgs/img0"+num+".png";
->                         
+>                                         
 >     	return false; 
 >     }
 >     ```
@@ -1474,7 +1474,7 @@
 >     	num = 1;    
 >     	}
 >     	document.getElementById("gallery").src = "resources/imgs/img0"+num+".png";
->                         
+>                                         
 >     	return 
 >     }
 >     ```
@@ -1494,7 +1494,7 @@
 >     	<p>child02</p>
 >     	<p>child03</p>
 >     </div>
->                         
+>                                         
 >     <button onclick="searchPar();">부모탐색</button>
 >     <br/>
 >     <button onclick="searchChi();">자식탐색</button>
@@ -1525,7 +1525,7 @@
 >     * ```
 >       function searchChi() {
 >       	var div = document.getElementsByTagName("div")[0];
->                                     
+>                                                             
 >       	var divChildren = div.childNodes;
 >       	for (var i = 0;i<divChildren.length;i++){
 >       		console.log(divChildren[i].nodeName);
@@ -1549,7 +1549,7 @@
 >   * ```
 >     function elementCreate(){
 >     	var div = document.createElement("div");        
->             
+>                     
 >     	var attr = document.createAttribute("style");      
 >     	attr.nodeValue = "border:2px solid blue";             
 >     	div.setAttributeNode(attr);  
@@ -1571,7 +1571,7 @@
 >     function elementCreate(){
 >     	var div = document.createElement("div");  
 >     	div.setAttribute("style","border:2px solid red;")
->             
+>                     
 >     	var txt = document.createTextNode("엘리먼트 생성!!");
 >     	div.appendChild(txt); 
 >     	document.body.appendChild(div);
@@ -1623,10 +1623,10 @@
 >       <input type="radio" name="rdobtn" value="img01.png"/>img01<br/>
 >       <input type="radio" name="rdobtn" value="img02.png"/>img02<br/>
 >       <input type="radio" name="rdobtn" value="img03.png"/>img03<br/>
->     
+>             
 >       <button onclick="createImg();">이미지 생성</button>
 >       <button onclick="deleteImg();">이미지 삭제</button>
->     
+>             
 >       <div id="imgview"><img src="" /></div>
 >     </body>
 >     ```
@@ -1644,17 +1644,17 @@
 >   * ```
 >     function createImg(){
 >     	var radios = document.getElementsByName("rdobtn");
->     
+>             
 >     	var radioVal=""; 
 >     	for (var i=0; i< radios.length;i++) {
 >     		if (radios[i].checked) {
 >     			radioVal = "resources/imgs/" + radios[i].value;
 >     		}
 >     	}
->     
+>             
 >     	var img = document.createElement("img");
 >     	img.setAttribute("src",radioVal);
->     
+>             
 >     	var div = document.getElementById("imgview");
 >     	var chd = document.querySelector("#imgview > img");
 >     	div.replaceChild(img,chd);
@@ -1696,13 +1696,13 @@
 >
 > * ```
 >   <body>
->       
+>               
 >       <h1>태그 추가하기</h1>
->   
+>           
 >       <button onclick="addAppend();">appendChild()</button>
 >       <button onclick="addInsert();">insertBefore()</button>
 >       <button onclick="moveElement();">element 이동</button>
->   
+>           
 >       <fieldset id="addele">
 >           <legend>부모태그</legend>
 >           <div>div</div>
@@ -1723,9 +1723,9 @@
 >     function addAppend() {
 >     	var fieldset = document.getElementById("addele");
 >     	var p = document.createElement("p");
->     
+>             
 >     	p.textContent = "자식 태그들 중 가장 마지막에 넣어진다.";
->     
+>             
 >     	fieldset.appendChild(p);
 >     }
 >     ```
@@ -1745,9 +1745,9 @@
 >     function addInsert(){
 >     	var newP = document.createElement("p");
 >     	var fieldset = document.getElementById("addele");
->     
+>             
 >     	newP.textContent = "엘리먼트의 앞에 넣어진다." + (count++);
->     
+>             
 >     	var oldDiv = document.querySelector("fieldset > div");
 >     	fieldset.insertBefore(newP,oldDiv);
 >     }
@@ -1770,11 +1770,161 @@
 >     	var moveEle = document.querySelector("fieldset").children[1];
 >     	var addEle = document.body;
 >     	addEle.appendChild(moveEle);
->     
+>                     
 >     }
 >     ```
 >
 >     1. 변수 moveEle에 fieldset의 인덱스 1번값을 지정합니다.
 >     2. 변수 addEle에 body를 지정합니다.
 >     3. addEle(body)의 뒤에 fieldset 인덱스 1번값을 추가합니다.
+
+## ex)createCell
+
+> * body 부분입니다.
+>
+>   * ````
+>     <body>
+>   
+>         <form>
+>             <table id="intable">
+>                 <tr>
+>                     <td>아이디</td>
+>                     <td><input type="text" name="id" /></td>
+>                 </tr>
+>                 <tr>
+>                     <td>비밀번호</td>
+>                     <td><input type="text" name="pw"/></td>
+>                 </tr>
+>                 <tr>
+>                     <td>주소</td>
+>                     <td><input type="text" name="addr"/></td>
+>                 </tr>
+>                 <tr>
+>                     <td>전화번호</td>
+>                     <td><input type="text" name="phone"/></td>
+>                 </tr>
+>             </table>
+>             <input type="button" value="추가" onclick="tableVal();"/>
+>             <input type="button" value="삭제" onclick="deleteAll();"/>
+>         </form>
+>     ````
+>
+>     1. input타입으로 입력할수 있게 만들며 name은 id로 지정해줍니다.
+>     2. 마찬가지로 비밀번호,주소,전화번호 각각 name을 지정해줍니다.
+>     3. "추가" 버튼입니다. 누를시 tableVal 함수가 실행됩니다.
+>     4. "삭제" 버튼입니다. 누를시 deleteAll함수가 실행됩니다. 
+>
+>   * ```
+>         <div id = "addtable">
+>             <table border="1" id="ctb">
+>                 <col width="100px" />
+>                 <col width="100px" />
+>                 <col width="300px" />
+>                 <col width="200px" />
+>                 <col width="100px" />
+>                 <thead>
+>                     <tr>
+>                         <th>아이디</th>
+>                         <th>비밀번호</th>
+>                         <th>주소</th>
+>                         <th>전화번호</th>
+>                         <th>삭제</th>
+>                     </tr>
+>                 </thead>
+>                 <tbody id="addtr"></tbody>
+>             </table>
+>         </div>
+>     </body>
+>     ```
+>
+>     1. 아이디부터 차례대로 가로 100,100 300,200,100크기의 열을 생성합니다.
+>     2. tbody의 id는 addtr입니다. 이곳에 새로운 각열의 내용에 맞는 새로운 행을 추가할겁니다.
+>
+> * tableVal함수입니다
+>
+>   * ```
+>     function tableVal(){
+>     	var doc = document.forms[0];
+>     	var vals = [doc.id.value, doc.pw.value, doc.addr.value, doc.phone.value]
+>     
+>     	for (var i=0; i < vals.length;i++) {
+>     	if(vals[i] == null || vals[i] =="" || vals[i] == undefined){
+>     		alert("제대로 입력했는지 다시 한번 확인해주세요!");
+>     		return;
+>     		}
+>     	}
+>     
+>     	document.getElementById("addtr").appendChild(createRow(vals));
+>     }
+>     ```
+>
+>     1. 변수 doc에 form인덱스 0번째를 지정해줍니다.
+>
+>     2. 변수 vals에 form[0]에서 입력했던 아이디(id),비밀번호(pw),주소(addr),전화번호(phone)의 내용을 받아옵니다.
+>
+>     3. for문을 사용하여 vals의 내용중 null이 있는지 빈칸이 있는지 값을 찾을수 없는지 유효성을 검사합니다.
+>
+>        *1개라도 검사에 적합하지 않을시 "제대로 입력했는지 다시 한번 확인해주세요!"를 출력*
+>   
+>     4. id가 addtr인것을 불러오고 그 뒤에 추가합니다.createRow함수의 내용을 ✅
+>   
+> * createRow함수입니다
+>
+>   * ```
+>     function createRow(vals){
+>     	var tr = document.createElement("tr");
+>     
+>     	for (var i = 0; i < vals.length; i++){
+>     		var td = document.createElement("td");
+>     		td.textContent = vals[i];
+>     		tr.appendChild(td)
+>     	}
+>     
+>     	var deleteTd=document.createElement("td");
+>     	deleteTd.innerHTML = "<input type='button' value='삭제' onclick ='delRow(this)'>";
+>     	tr.appendChild(deleteTd);
+>     	return tr;
+>     }
+>     ```
+>
+>     1. 변수 tr에 tr을 새롭개 만들어 줍니다.
+>     2. for문을 사용하여 전의 함수 tableVal에서 가져온 vals의 길이만큼 반복합니다.
+>     3. 반복하는 동안 변수 td에 새로운 td를 만들고 그 안에 vals의 인덱스에 있는값을 넣습니다.
+>     4. 변수 tr(새 tr)의 위치에 td의 내용들이 추가됩니다.  (아이디,비밀번호,주소,전화번호)
+>     5. 변수 deleteTd에 새로운 td를 추가해줍니다.
+>     6. deleteTd는 "삭제" 버튼형식으로  누를시 delRow함수☢가 실행됩니다.
+>     7. tr에 새로운td(deleteTd)를 마지막부분에 추가합니다
+>     8. 방금까지 만들어진 새 tr과 그 속의 td내용들이 ✅에 전부 들어갑니다.
+>
+>
+> * delRow함수입니다
+>
+>   * ```
+>     function delRow(ele){
+>     
+>     	var delTr = ele.parentNode.parentNode;
+>     	var tbody = document.getElementById("addtr");	
+>     	tbody.removeChild(delTr);
+>     }
+>     ```
+>
+>     1. 변수 delTr에 이것("삭제"버튼)의 부모(td)의 부모(tr)를 지정해줍니다
+>     2. 변수 tbody에 id addtr을 받아옵니다.
+>     3. 변수 tbody(addtr)에서 현재 받아온 delTr을 지워줍니다.
+>
+> * deleteAll함수입니다.
+>
+>   * ```
+>             function deleteAll(){
+>                 var tbody = document.getElementById("addtr");
+>     
+>                 while(tbody.hasChildNodes()){
+>                     tbody.removeChild(tbody.lastChild);
+>                 }
+>             }
+>     ```
+>
+>     1. 변수 tbody 에 id addtr을 받아옵니다.
+>     2. while문으로 tbody(addtr)의 자식노드(tr)들을 선택해줍니다.
+>     3. tbody(addtr)의 마지막 자식(tr)부터 차례대로 지워줍니다. 전부 사라질때까지
 
