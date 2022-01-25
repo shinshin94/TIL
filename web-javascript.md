@@ -1690,3 +1690,91 @@
 >
 > 
 
+## tag
+
+> * body입니다
+>
+> * ```
+>   <body>
+>       
+>       <h1>태그 추가하기</h1>
+>   
+>       <button onclick="addAppend();">appendChild()</button>
+>       <button onclick="addInsert();">insertBefore()</button>
+>       <button onclick="moveElement();">element 이동</button>
+>   
+>       <fieldset id="addele">
+>           <legend>부모태그</legend>
+>           <div>div</div>
+>       </fieldset>
+>   </body>
+>   ```
+>
+>   1. 각 함수를 호출할 버튼을 생성하였습니다.
+>   2. 부모태그로 쓸것을 표시하여두었습니다.
+>
+> * appendChild()
+>
+>   * ```
+>     <button onclick="addAppend();">appendChild()</button>
+>     ```
+>
+>   * ```
+>     function addAppend() {
+>     	var fieldset = document.getElementById("addele");
+>     	var p = document.createElement("p");
+>     
+>     	p.textContent = "자식 태그들 중 가장 마지막에 넣어진다.";
+>     
+>     	fieldset.appendChild(p);
+>     }
+>     ```
+>
+>     1. 변수 fieldset에 id addele를 저장합니다
+>     2. 변수 p에 새로운 p를 생성합니다.
+>     3. p의 내용으로 "자식 태그들 중 가장 마지막에 넣어진다"  를 넣어줍니다.
+>     4. 변수 fieldset(위치 addele)에 마지막 부분에 p를 추가해줍니다 .div뒷부분입니다.
+>
+> * insertBefore() 
+>
+>   * ```
+>     <button onclick="addInsert();">insertBefore()</button>
+>     ```
+>
+>   * ```
+>     function addInsert(){
+>     	var newP = document.createElement("p");
+>     	var fieldset = document.getElementById("addele");
+>     
+>     	newP.textContent = "엘리먼트의 앞에 넣어진다." + (count++);
+>     
+>     	var oldDiv = document.querySelector("fieldset > div");
+>     	fieldset.insertBefore(newP,oldDiv);
+>     }
+>     ```
+>
+>     1. 변수 newP에 새로운 p를 생성합니다.
+>     2. 변수 fieldset에 id addele를 가져옵니다.
+>     3. newP의 내용으로 "엘리먼트의 앞에 넣어진다 "내용이 들어가고 count++를 줍니다.
+>     4. 변수 oldDiv에 fieldset의 자식으로 div를 지정해줍니다.
+>     5. 변수 fieldset(addele)의 위치 div전에 oldDiv의 내용이 카운트되며 위에서부터 1,2,3,...으로 추가됩니다. 
+>
+> * element 이동
+>
+>   * ```
+>     <button onclick="moveElement();">element 이동</button>
+>     ```
+>
+>   * ```
+>     function moveElement(){
+>     	var moveEle = document.querySelector("fieldset").children[1];
+>     	var addEle = document.body;
+>     	addEle.appendChild(moveEle);
+>     
+>     }
+>     ```
+>
+>     1. 변수 moveEle에 fieldset의 인덱스 1번값을 지정합니다.
+>     2. 변수 addEle에 body를 지정합니다.
+>     3. addEle(body)의 뒤에 fieldset 인덱스 1번값을 추가합니다.
+
