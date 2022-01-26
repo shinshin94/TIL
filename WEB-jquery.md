@@ -607,5 +607,48 @@
 >     * p의 자식으로 b를 선언하고 div를 선택해주고 배경색상 노랑을 줍니다. (핫핑크는 우선연산이라 안바뀝니다.)
 >     * p의 인덱스값 0번(eq(0))의 다음(next)값인 인덱스 1번의 색상을 파랑으로 바꿔줍니다. (2.children())
 
+## add()
 
+> * body입니다.
+>
+>   * ```
+>     <div>
+>     	<p>add()</p>
+>     	<span>add():선택한 엘리먼트에 추가적으로 selector 표현식을 작성할 때 사용</span>
+>     	<p>is()</p>
+>     	<b>선택한 엘리먼트들 중에 구하는 엘리먼트가 있는지 확인할 때 사용</b>
+>     </div>
+>     ```
+>
+>     * 설명입니다.
+>
+> * head입니다
+>
+>   * ```
+>     $(function(){
+>     	$("p:eq(0)").add("span").css("color","red")
+>     
+>     	$("div").children().click(function(){
+>     		if($(this).prop("tagName")=="SPAN"){
+>     			alert("span tag click!!!");
+>     			$(this).css("color","aqua");
+>     			//$(this).attr("title","abc");
+>     			//$(this).prop("title","abc");
+>     		}
+>     		if($(this).is("p")){
+>     			$(this).css("background-color","violet");
+>     		}
+>     	})
+>     	$("b").click(function(){
+>     		$("div").children().css("background-color","");
+>     		$("p:eq(0)").add("span").css("color","red");
+>     	})
+>     });
+>     ```
+>
+>     * p의 0번째 인덱스 그리고(add) span에 빨간 색상을 추가해줍니다 
+>     * div의 자식중 클릭시 실행되는 함수입니다.
+>     * 만약 누를것 tagName이 span일시 "span tag click!!!"을 띄웁니다.그리고 span을 파랑으로 바꿉니다.
+>     * 만약 누를것중에 p가 있다면 누른것의 배경색상을 보라색으로 바꿉니다.
+>     * b를 누르면 실행되는 함수입니다. div의 자식들의 배경색상을 비어있게 만들고 p의 0번째인덱스와 span의 색상을 빨강으로 바꿉니다.
 
