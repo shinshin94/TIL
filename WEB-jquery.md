@@ -564,3 +564,48 @@
 >     1. div의 자식으로 p를 선언하고 p의 3번째 인덱스를 클릭시 실행되는함수입니다.
 >     2. pre속의 b의 인덱스 마지막에 배경 색상을 하늘파랑으로 지정해줍니다.
 
+## parent
+
+> * body입니다
+>
+>   * ```
+>     <pre>
+>     	<b>find("selector") : 선택한 엘리먼트의 자손들 중에 탐색</b>
+>     	<b>children("selector") : 선택한 엘리먼트의 자식들 중에 탐색</b>
+>     	<b>parent() / parents("selector") : 선택한 엘리먼트의 부모 / 조상 탐색</b>
+>     	<b>next("selector") : 선택한 엘리먼트 다음에 따라오는 요소 탐색</b>       
+>     </pre>
+>     
+>     <div>
+>     	<p><b>1</b></p>
+>     	<p id="chd">2</p>
+>     	<p>3</p>
+>     	<p>4</p>
+>     	<p>5</p>
+>     </div>
+>     ```
+>
+>     * 내용에 설명을 적어두었습니다.
+>
+> * head입니다.
+>
+>   * ```
+>     <script>
+>     	$(document).ready(function(){
+>     		$("div").find("b").css({"font-size": "30px","color":"red"});
+>     		$("div").children("#chd").text("2.children()");
+>     		$("p > b").parent().css("background-color","hotpink");
+>     		$("p > b").parents("div").css("background-color","yellow");
+>     		$("p").eq(0).next().css("color","blue");
+>     	})
+>     </script>
+>     ```
+>
+>     * div에서 b를 찾습니다.(find) 가장먼저 만난 b의폰트 사이즈를 30px로 색상을 빨강으로 바꿔줍니다 
+>     * div의 자식 id chd를 찾아서 2.children() 으로 내용을 바꿔줍니다.
+>     * p의 자식으로 b를 선언하고 가장 처음 부모(인덱스 0)의 색상을 핫핑크로 바꿔줍니다.
+>     * p의 자식으로 b를 선언하고 div를 선택해주고 배경색상 노랑을 줍니다. (핫핑크는 우선연산이라 안바뀝니다.)
+>     * p의 인덱스값 0번(eq(0))의 다음(next)값인 인덱스 1번의 색상을 파랑으로 바꿔줍니다. (2.children())
+
+
+
