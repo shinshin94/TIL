@@ -30,7 +30,7 @@
 >     	$("#test-btn").click(function(){
 >     		alert("클릭했음!!");
 >     	});
->     
+>         
 >     	$("img").click(function(){
 >     		$(this).hide();
 >     	});
@@ -102,3 +102,310 @@
 >     ```
 >
 >     1. 버튼을 누르면 이미지를 숨기고 다시 누르면 나타나는 함수입니다.
+
+## selector
+
+> * 태그 선택
+>
+>   * ```
+>     <button onclick="selector01();">태그 선택</button>
+>     ```
+>
+>   * ```
+>     function selector01(){
+>     	$("span").css("color","red");
+>     	$("#view").text('$("span").css("color","red");');
+>     }
+>     ```
+>
+>     1. "태그 선택" 버튼을 누를시 실행되는 함수입니다.
+>     2. span에 해당하는것에 빨강 색상을 줍니다.
+>     3. #view부분에 텍스트로 '$("span").css("color","red");' 이 출력됩니다.
+>
+>   * ```
+>     <ul>
+>     	<li><span>tag로 선택</span></li>
+>     	<li id="t1">id로 선택</li>
+>     	<li class="t2">class로 선택</li>
+>     	<li><span>parent child로 선택</span></li>
+>     	<li><b><span>parent &gt; child</span></b>로 선택</li>
+>     	<li>:nth-child(n/odd/even)로 선택</li>
+>     	<li>:first-child로 선택</li>
+>     	<li>:last-child로 선택</li>
+>     </ul>
+>     <div id="view"></div>
+>     ```
+>
+>     * 색상 변경 적용 되는것들
+>       * tag로 선택
+>       * parent child로 선택
+>       * parent &gt; child
+>
+> * id선택(t1)
+>
+>   * ```
+>     <button onclick="selector02();">id선택(t1)</button>
+>     ```
+>
+>   * ```
+>     function selector02(){
+>     	$("#t1").css("color","green");
+>     	$('#view').text('$("#t1").css("color","green");');
+>     }
+>     ```
+>     
+>     1. "id 선택" 버튼을 누를시 실행되는 함수입니다.
+>     2. t1에 해당하는것에 초록 색상을 줍니다.
+>     3. #view부분에 텍스트로 '$("#t1").css("color","green");' 이 출력됩니다.
+>     
+>   * ```
+>     <ul>
+>     	<li><span>tag로 선택</span></li>
+>     	<li id="t1">id로 선택</li>
+>     	<li class="t2">class로 선택</li>
+>     	<li><span>parent child로 선택</span></li>
+>     	<li><b><span>parent &gt; child</span></b>로 선택</li>
+>     	<li>:nth-child(n/odd/even)로 선택</li>
+>     	<li>:first-child로 선택</li>
+>     	<li>:last-child로 선택</li>
+>     </ul>
+>     <div id="view"></div>
+>     ```
+>   
+>     * 색상 변경 적용 되는것들
+>       * id로 선택
+>   
+> * class 선택(t2)
+>
+>   * ```
+>     <button onclick="selector03();">class 선택(t2)</button>
+>     ```
+>
+>   * ```
+>     function selector03(){
+>     	$(".t2").css("color","violet");
+>     	$("view").text('$(".t2").css("color","violet");');
+>     }
+>     ```
+>
+>     1. "class 선택" 버튼을 누를시 실행되는 함수입니다.
+>     2. t2에 해당하는것에 보라 색상을 줍니다.
+>     3. #view부분에 텍스트로'$(".t2").css("color","violet");' 이 출력됩니다.
+>
+>   * ```
+>     <ul>
+>     	<li><span>tag로 선택</span></li>
+>     	<li id="t1">id로 선택</li>
+>     	<li class="t2">class로 선택</li>
+>     	<li><span>parent child로 선택</span></li>
+>     	<li><b><span>parent &gt; child</span></b>로 선택</li>
+>     	<li>:nth-child(n/odd/even)로 선택</li>
+>     	<li>:first-child로 선택</li>
+>     	<li>:last-child로 선택</li>
+>     </ul>
+>     <div id="view"></div>
+>     ```
+>
+>     * 색상 변경 적용 되는것들
+>       * class로 선택
+>
+> * p c 선택
+>
+>   * ```
+>     <button onclick="selector04();">p c 선택</button>
+>     ```
+>
+>   * ```
+>     function selector04(){
+>     	$("li span").css("background-color","blue");
+>     	$("#view").text('$("li span").css("background-color","blue");');
+>     }
+>     ```
+>
+>     1. "p c 선택" 버튼을 누를시 실행되는 함수입니다.
+>     2. li span 에 해당하는것의 배경에 파랑 색상을 줍니다.
+>     3. #view부분에 텍스트로'$("li span").css("background-color","blue");' 이 출력됩니다.
+>
+>   * ```
+>     <ul>
+>     	<li><span>tag로 선택</span></li>
+>     	<li id="t1">id로 선택</li>
+>     	<li class="t2">class로 선택</li>
+>     	<li><span>parent child로 선택</span></li>
+>     	<li><b><span>parent &gt; child</span></b>로 선택</li>
+>     	<li>:nth-child(n/odd/even)로 선택</li>
+>     	<li>:first-child로 선택</li>
+>     	<li>:last-child로 선택</li>
+>     </ul>
+>     <div id="view"></div>
+>     ```
+>
+>     * 색상 변경 적용 되는것들
+>       * tag로 선택
+>       * parent child로 선택
+>       * parent &gt;  child
+>
+> * p &gt; c 선택
+>
+>   * ```
+>     <button onclick="selector05();">p &gt; c 선택</button>
+>     ```
+>
+>   * ```
+>     function selector05(){
+>     	$("li > span").css("color","yellow");
+>     	$("#view").text('$("li > span").css("color","yellow");');
+>     }
+>     ```
+>
+>     1. "p &gt; c 선택" 버튼을 누를시 실행되는 함수입니다.
+>     2. li > span 에 해당하는것에 노랑 색상을 줍니다.
+>     3. #view부분에 텍스트로 '$("li > span").css("color","yellow");' 이 출력됩니다.
+>
+>   * ```
+>     <ul>
+>     	<li><span>tag로 선택</span></li>
+>     	<li id="t1">id로 선택</li>
+>     	<li class="t2">class로 선택</li>
+>     	<li><span>parent child로 선택</span></li>
+>     	<li><b><span>parent &gt; child</span></b>로 선택</li>
+>     	<li>:nth-child(n/odd/even)로 선택</li>
+>     	<li>:first-child로 선택</li>
+>     	<li>:last-child로 선택</li>
+>     </ul>
+>     <div id="view"></div>
+>     ```
+>
+>     * 색상 변경 적용 되는것들
+>       * tag로 선택
+>       * parent child로 선택
+>       * ❌주의 parent &gt;  child 는 손자라서 선택되지 않는다❌
+>
+> * nth-child 선택
+>
+>   * ```
+>     <button onclick="selector06();">nth-child 선택</button>
+>     ```
+>
+>   * ```
+>     function selector06(){
+>     	$("li:nth-child(even)").css("background-color","yellow");
+>     	$("#view").text('$("li:nth-child(6)").css("background-color","yellow");');
+>     }
+>     ```
+>
+>     1. "nth-child 선택" 버튼을 누를시 실행되는 함수입니다.
+>     2. li:nth-child(even) 에 해당하는것의 배경에 노랑 색상을 줍니다.
+>        * `even` 짝수  		`odd`홀수
+>     3. li에 짝수번째가 선택됩니다.
+>     4. #view부분에 텍스트로 '$("li:nth-child(6)").css("background-color","yellow");' 이 출력됩니다.
+>
+>   * ```
+>     <ul>
+>     	<li><span>tag로 선택</span></li>
+>     	<li id="t1">id로 선택</li>
+>     	<li class="t2">class로 선택</li>
+>     	<li><span>parent child로 선택</span></li>
+>     	<li><b><span>parent &gt; child</span></b>로 선택</li>
+>     	<li>:nth-child(n/odd/even)로 선택</li>
+>     	<li>:first-child로 선택</li>
+>     	<li>:last-child로 선택</li>
+>     </ul>
+>     <div id="view"></div>
+>     ```
+>
+>     * 색상 변경 적용 되는것들
+>       * id로 선택
+>       * parent child로 선택
+>       * :nth-child(n/odd/even)로 선택
+>       * :last-child로 선택
+>
+> * first-child 선택
+>
+>   * ```
+>     <button onclick="selector07();">first-child 선택</button>
+>     ```
+>
+>   * ```
+>     function selector07(){
+>     	$("li:first-child").css("background-color","yellowgreen");
+>     	$("#view").text('$("li:first-child").css("background-color","yellowgreen");');
+>     }
+>     ```
+>
+>     1. "first-child 선택" 버튼을 누를시 실행되는 함수입니다.
+>     2. li:first-child 에 해당하는것의 배경에 연노랑 색상을 줍니다.
+>     3. li에 가장 첫번째 부분입니다.
+>     4. #view부분에 텍스트로 '$("li:first-child").css("background-color","yellowgreen"이 출력됩니다.
+>
+>   * ```
+>     <ul>
+>     	<li><span>tag로 선택</span></li>
+>     	<li id="t1">id로 선택</li>
+>     	<li class="t2">class로 선택</li>
+>     	<li><span>parent child로 선택</span></li>
+>     	<li><b><span>parent &gt; child</span></b>로 선택</li>
+>     	<li>:nth-child(n/odd/even)로 선택</li>
+>     	<li>:first-child로 선택</li>
+>     	<li>:last-child로 선택</li>
+>     </ul>
+>     <div id="view"></div>
+>     ```
+>
+>     * 색상 변경 적용 되는것들
+>       * tag로 선택
+>
+> * last-child 선택
+>
+>   * ```
+>     <button onclick="selector08();">last-child 선택</button>
+>     ```
+>
+>   * ```
+>     function selector08(){
+>     	$("li:last-child").css("color","orange");
+>     	$("#view").text('$("li:last-child").css("color","orange");');
+>     }
+>     ```
+>
+>     1. "last-child 선택" 버튼을 누를시 실행되는 함수입니다.
+>     2. li:last-child 에 해당하는것에 오렌지 색상을 줍니다.
+>     3. li에 가장 마지막 부분입니다.
+>     4. #view부분에 텍스트로 '$("li:last-child").css("color","orange");'이 출력됩니다.
+>
+>   * ```
+>     <ul>
+>     	<li><span>tag로 선택</span></li>
+>     	<li id="t1">id로 선택</li>
+>     	<li class="t2">class로 선택</li>
+>     	<li><span>parent child로 선택</span></li>
+>     	<li><b><span>parent &gt; child</span></b>로 선택</li>
+>     	<li>:nth-child(n/odd/even)로 선택</li>
+>     	<li>:first-child로 선택</li>
+>     	<li>:last-child로 선택</li>
+>     </ul>
+>     <div id="view"></div>
+>     ```
+>
+>     * 색상 변경 적용 되는것들
+>       * :last-child로 선택
+>
+> * reset
+>
+>   * ```
+>     <button onclick="cls();">reset</button>
+>     ```
+>
+>   * ```
+>     function cls(){
+>     	$("*").css("color","black").css("background-color","");
+>     	$("#view").text("")
+>     }
+>     ```
+>
+>     * "reset"을 누를시 전부 초기화 되는 버튼입니다.
+>     * *로 전부 선택한후 색상을 black(디폴트 값),배경을 비어있게 지정합니다.
+>     * view에도 비어있게 만듭니다.
+
+
+
