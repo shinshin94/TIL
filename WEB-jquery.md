@@ -2,6 +2,10 @@
 
 > ​      jquery 기본 작성법!
 >
+> * 불러오기 
+>   * `<script src="resources/js/jquery-3.6.0.min.js"></script>`
+>   * `<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>`
+>
 > * selector 표현식
 >
 > ​      `jQuery("selector").method();` -> `$("selector").method();`
@@ -13,6 +17,8 @@
 > ​      `onload=function(){  }` ->  `$(function(){   });`
 >
 > ​	      `$(document).ready(function(){   });`
+>
+> 
 
 ## basic
 
@@ -407,5 +413,91 @@
 >     * *로 전부 선택한후 색상을 black(디폴트 값),배경을 비어있게 지정합니다.
 >     * view에도 비어있게 만듭니다.
 
+## input
 
+> *  input 박스입니다.
+>
+>   * ```
+>     <input type="text" />
+>     <br/>
+>     <input type="button" value="선택" onclick="inputText();" />
+>     ```
+>
+>   * ```
+>     function inputText(){
+>     	var txt = $("input:text").val();
+>     	alert(txt);
+>     }
+>     ```
+>
+>     1. text를 입력하는 칸입니다. 다음줄에 "선택"을 누를시 inputext함수가 실행됩니다.
+>     2. 변수 txt에 text에 입력한 내용을 받아옵니다 (val=value)
+>     3. 입력한 내용을 창으로 띄웁니다.
+>
+> * 라디오박스입니다.
+>
+>   * ```
+>     <input type="radio" value="radio val" onclick="inputRadio();"/>radio
+>     <br/>
+>     <div id="a"></div>
+>     ```
+>
+>   * ```
+>     function inputRadio(){
+>     	var radioVal = $("input:radio").val();
+>     	$("#a").html(radioVal);
+>     }
+>     ```
+>
+>     1. 라디오박스 형태로 체크할수 있습니다. 체크시 inputRadio함수가 실행됩니다.
+>     2. 변수 radioVal에 radio에 입력된 내용을 받아옵니다.
+>     3. id의a 에 받아온 radio의 내용을 출력합니다. (html=innerHtml)
+>
+> * 체크박스입니다.
+>
+>   * ```
+>     <input type="checkbox" value="check val" onclick="inputCheck();"/>check
+>     <br/>
+>     <div id="a"></div>
+>     ```
+>
+>   * ```
+>     function inputCheck(){
+>     	var checkVal = $("input:checkbox").val()
+>     	$("#a").html(checkVal);
+>     }
+>     ```
+>
+>     1. 체크박스 형태로 체크할수 있습니다. 체크시 inputCheck함수가 실행됩니다.
+>     2. 변수 checkVal에 checkbox에 입력된 내용을 받아옵니다.
+>     3. id의 a 에 받아온 checkbox의 내용을 출력합니다. (html=innerHtml)
+>
+> * select박스입니다.
+>
+>   * ```
+>     <select>
+>     	<option value="one">1</option>
+>     	<option value="two">2</option>
+>     	<option value="three">3</option>
+>     </select>
+>     ```
+>
+>   * ```
+>     $(function(){
+>     	$("select").change(function(){
+>     		var option = $("select > option:selected");
+>     		alert(option.val());
+>     		alert($("select>option").index(option));
+>     	});
+>     });
+>     ```
+>
+>     1. 셀렉트 박스를 바디에 생성합니다.
+>     2. 셀렉트 박스가 변할시 실행되는 함수입니다.
+>     3. 변수 option 은 select의 자식으로 option에 선택된 것으로 받아옵니다.
+>     4. 선택된것의 내용을 창에 띄웁니다.
+>     5. 선택된것의 인덱스 값을 창에 띄웁니다
 
+## checkbox
+
+## 
