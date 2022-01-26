@@ -652,3 +652,65 @@
 >     * 만약 누를것중에 p가 있다면 누른것의 배경색상을 보라색으로 바꿉니다.
 >     * b를 누르면 실행되는 함수입니다. div의 자식들의 배경색상을 비어있게 만들고 p의 0번째인덱스와 span의 색상을 빨강으로 바꿉니다.
 
+## hover
+
+>* body입니다.
+>
+>  * ```
+>    <b>DOM 탐색 메서드</b>
+>    <br/>
+>    <div id="menu1" class="menu">
+>    	<a href="#a">필터링 메서드</a>
+>    	<div>.eq()</div>
+>    	<div>.slice()</div>
+>    	<div>.first()</div>
+>    	<div>.last()</div>
+>    	</div>
+>    
+>    <div id="menu2" class="menu">
+>    	<a href="#b">트리 탐색 메서드</a>
+>    	<div>.find()</div>
+>    	<div>.children()</div>
+>    	<div>.parent()</div>
+>    	<div>.next()</div>
+>    </div>
+>    
+>    <div id="menu3" class="menu">
+>    	<a href="#c">탐색 메서드</a>
+>    	<div>.add()</div>
+>    	<div>.is()</div>
+>    </div>
+>    ```
+>
+>* head입니다.
+>
+>  * ```
+>    $(function(){
+>    	$(".menu div").css("display",'none');
+>    	$(".menu").hover(function(){
+>    	$(this).children("div").toggle();
+>    	});
+>    })
+>    ```
+>
+>    1. menu 의 div 를 보이지 않게 none 으로 해주세요
+>    2. menu의 위에 마우스를 올릴시(hover) 실행되는 함수입니다.
+>    3. 지금 올린것의 자식들div를 보여주세요. (마우스를 내릴시 숨겨집니다.)
+>
+>  * ```
+>    $(function(){
+>    	$(".menu div").css("display",'none');
+>    	$(".menu").hover(
+>    		//handler in
+>    		function(){
+>    			$(this).children("div").show();
+>    		},
+>    		// handler out
+>    		function(){
+>    		$(this).children("div").hide();
+>    		}
+>    	)
+>    })
+>    ```
+>
+>    * 다른 방법입니다.
