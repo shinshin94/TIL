@@ -36,7 +36,7 @@
 >     	$("#test-btn").click(function(){
 >     		alert("클릭했음!!");
 >     	});
->         
+>           
 >     	$("img").click(function(){
 >     		$(this).hide();
 >     	});
@@ -498,7 +498,7 @@
 >     4. 선택된것의 내용을 창에 띄웁니다.
 >     5. 선택된것의 인덱스 값을 창에 띄웁니다
 
-## checkbox
+## checkbox✅
 
 ## element search
 
@@ -511,7 +511,7 @@
 >     	<b>first() : 선택한 엘리먼트들 중에 첫번째 요소</b>
 >     	<b>last() : 선택한 엘리먼트들 중에 마지막 요소</b>
 >     </pre>
->     
+>       
 >     <div>
 >     	<p>eq()</p>
 >     	<p>slice</p>
@@ -575,7 +575,7 @@
 >     	<b>parent() / parents("selector") : 선택한 엘리먼트의 부모 / 조상 탐색</b>
 >     	<b>next("selector") : 선택한 엘리먼트 다음에 따라오는 요소 탐색</b>       
 >     </pre>
->     
+>       
 >     <div>
 >     	<p><b>1</b></p>
 >     	<p id="chd">2</p>
@@ -627,7 +627,7 @@
 >   * ```
 >     $(function(){
 >     	$("p:eq(0)").add("span").css("color","red")
->     
+>         
 >     	$("div").children().click(function(){
 >     		if($(this).prop("tagName")=="SPAN"){
 >     			alert("span tag click!!!");
@@ -666,7 +666,7 @@
 >    	<div>.first()</div>
 >    	<div>.last()</div>
 >    	</div>
->    
+>       
 >    <div id="menu2" class="menu">
 >    	<a href="#b">트리 탐색 메서드</a>
 >    	<div>.find()</div>
@@ -674,7 +674,7 @@
 >    	<div>.parent()</div>
 >    	<div>.next()</div>
 >    </div>
->    
+>       
 >    <div id="menu3" class="menu">
 >    	<a href="#c">탐색 메서드</a>
 >    	<div>.add()</div>
@@ -739,7 +739,7 @@
 >     	</p>
 >     	<p>클릭</p>
 >     </div>
->     
+>       
 >     <div>
 >     	<p>
 >     		<a href="http://www.google.com">클릭!</a>
@@ -778,7 +778,7 @@
 >     		"mouseout":function(){
 >     			$(this).css("color","");
 >     		}
->     
+>         
 >     	});
 >     ```
 >
@@ -815,3 +815,170 @@
 >
 >     1. body의 on입니다. on이기 때문에 나중에 실행됩니다. p를 클릭시 발동되는 함수라는 내용입니다
 >     2. 함수의 내용으로는 "새로 추가되는 요소도 이벤트 적용!"을 창으로 띄웁니다.
+
+## accodian
+
+> 태그를 기준으로 내용 보이기/가리기
+>
+> * body입니다.
+>
+>   * ```
+>     <p>메뉴 만들기</p>
+>     <ul type="square" class="main_menu">
+>     	<li class="sub_menu1"><b>(1)선택</b>
+>     		<ul type="circle" class="sub_menu2">
+>     			<li>1선택</li>
+>     			<li>1-2선택</li>
+>     		</ul>
+>     	</li>
+>     	<li class="sub_menu1"><b>(2)선택</b>
+>     		<ul type="circle" class="sub_menu2">
+>     			<li>2선택</li>
+>     			<li>2-1선택</li>
+>     		</ul>
+>     	</li>
+>     	<li class="sub_menu1"><b>(3)선택</b>
+>     		<ul type="circle" class="sub_menu2">
+>     			<li>3선택</li>
+>     		</ul>
+>     	</li>
+>     	<li class="sub_menu1"><b>(4)선택</b>
+>     		<ul type="circle" class="sub_menu2">
+>     			<li>4-1선택</li>
+>     			<li>4-2선택</li>
+>     		</ul>
+>     	</li>
+>     </ul>
+>     ```
+>
+>     * 마우스를 클릭시 나타낼 내용입니다.
+>
+> * head입니다
+>
+>   * ```
+>     $(function(){
+>     	$("b").click(function(){
+>     		$(this).next().slideToggle();
+>     		$(this).parent().siblings().find("ul").slideUp();
+>     	})
+>     })
+>     ```
+>
+>     1. b를 클릭했을때의 함수입니다.
+>     2. 선택한것<b>의 다음<ul>을 슬라이드형태로 보이기/숨기기 합니다
+>     3. 선택한것<b>의 부모의 형제들(siblings)에서 찾습니다(find) "ul"을 그리고 slideUp해줍니다(가리기)
+
+## class
+
+> 이미지  확대 축소 입니다.
+>
+> * style입니다.
+>
+>   * ```
+>     <style>
+>     	img{width: 200px; height: 200px;}
+>     	.addsize{width: 300px; height: 300px;}
+>     	.onoff{display: none;}
+>     </style>
+>     ```
+>
+>     * 이미지의 기본 크기는 가로 200px 높이 200px입니다.
+>     * addsize에 대한 크기는 가로 300px 높이 300px입니다
+>     * onoff시 디스플레이 값을 none으로  바꿔줍니다.
+>
+> * body입니다.
+>
+>   * ```
+>     <button id="btn">class on/off</button>
+>     <br/>
+>     <img src="resources/imgs/img01.png" alt="img01" title="이미지 1번" />
+>     <img src="resources/imgs/img02.png" alt="img02" title="이미지 2번" />
+>     <img src="resources/imgs/img03.png" alt="img03" title="이미지 3번" />
+>     ```
+>
+>     1. id 가 btn인 "class on/off" 버튼입니다.
+>     2. 내용으로 3개의 이미지가 있습니다.
+>
+> * head입니다.
+>
+>   * ```
+>     $(document).ready(function(){
+>     	$("#btn").click(function(){
+>     		$("img").toggleClass("onoff")
+>     	})
+>     
+>     	$("img").click(function(){
+>     		if($(this).hasClass("addsize")){
+>     			$(this).removeClass("addsize").attr("title","이미지 축소됨");
+>     		} else {
+>     			$(this).addClass("addsize").attr("title","이미지 확대됨");
+>     		}
+>     	})
+>     })
+>     ```
+>
+>     1.  실행시 호출되는 함수입니다.
+>     2. id가 btn인 것을 클릭시 실행되는 함수입니다.
+>        1. 이미지에 대해 toggleClass인 onoff(style)를 활성/비활성 합니다
+>     3. 이미지를 클릭시 실행되는 함수입니다.
+>        1. 만약 선택한 이미지에 addsize(style)가 있다면 
+>           1. 선택한 이미지에있는  addsize(style)를 지우고 tittle에 이미지 축소됨을 만들어줍니다. 
+>        2. 없다면
+>           1. 선택한 이미지에 addsize(style) 더해줍니다. 그리고 tittle에 이미지 확대됨을 써줍니다.
+
+## insert
+
+> * head입니다
+>
+>   * ```
+>     $(function(){
+>     	var cnt=0
+>     	$("button:eq(0)").click(function(){
+>     		$("div").prepend($("<p>").addClass("prepend").text("prepend"+(++cnt)));
+>     	})
+>     	$("button:eq(1)").click(function(){
+>     		$("div").append($("<p>").addClass("append").text("append"+(++cnt)));
+>     	})
+>     	$("button:eq(2)").click(function(){
+>     		$("div").html("<b>html 요소를 바꾼다.</b>")
+>     	})
+>     	$("button:eq(3)").click(function(){
+>     		$("div").text("<b>text 요소를 바꾼다.</b>")
+>     	})
+>     })
+>     ```
+>
+>     1. 실행되는 함수입니다.
+>     2. 전역 변수 cnt는 추가되는 위치를 알기 쉽게 하기 위해 넣었습니다.
+>     3. 버튼의 인덱스 0 번째를 클릭했을시 실행되는 함수입니다. 0️⃣
+>        1. div의 앞쪽에 <P>에 클래스 prepend를 추가하고 내용으로  prepend와 cnt값을 추가해 줍니다.   <p class="prepend">prepend1</p>
+>     4. 버튼의 인덱스 1 번째를 클릭했을시 실행되는 함수입니다.1️⃣
+>        1. div의 뒤쪽에 <P>에 클래스 append를 추가하고 내용으로  prepend와 cnt값을 추가해 줍니다.   <p class="append">append2</p>
+>     5. 버튼의 인덱스 2 번째를 클릭했을시 실행되는 함수입니다.2️⃣
+>        1.  div에 현재 html 형식<b>을 받아 "html 요소를 바꾼다."를 출력합니다.
+>     6. 버튼의 인덱스 3 번째를 클릭했을시 실행되는 함수입니다.3️⃣
+>        1. div에 텍스트 `"<b>text 요소를 바꾼다.</b>"`를 출력합니다
+>
+> * body입니다.
+>
+>   * ```
+>     <body>   
+>         <button>prepend</button> 0️⃣
+>         <button>append</button>  1️⃣
+>         <button>html</button>    2️⃣
+>         <button>txt</button>     3️⃣
+>         
+>         0️⃣
+>         <div>
+>            2️⃣ <p>내부 삽입1</p>  3️⃣
+>            2️⃣ <p>내부 삽입2</p>  3️⃣
+>         </div>
+>         
+>         1️⃣
+>     </body>
+>     ```
+>
+>     * 각 버튼을 눌렀을때 추가되는 위치나 바뀌는 위치입니다.
+
+
+
