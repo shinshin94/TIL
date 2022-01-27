@@ -1164,3 +1164,83 @@
 >     ```
 >
 >     * div위에 6개의 이미지가 가로로 정렬되고 붉은 도트점 상자 그리고 이미지 밑에는 stop 버튼이 있습니다.
+
+## wrap
+
+> **wrap, unwrap, wrapInner, wrapAll 의 사용법입니다**
+>
+> * style입니다
+>
+>   * ```
+>     <style>
+>     	.box{border: 2px solid red;}
+>     	#menu{background-color: skyblue;text-align: right;}
+>     	a{text-decoration: none; font-size: 20px;}
+>     	#menu div{display: inline-block; margin-right: 10px;}
+>     </style>
+>     ```
+>
+>   * 
+>
+> * head입니다.
+>
+>   * ```
+>     $(function(){
+>     	var $box = $("<div>").addClass("box");
+>     	$(".sub_menu:first").wrap($box);
+>     ```
+>
+>     1. 변수 $box 에 div에 클래스 box를 추가한 내용을 넣어줍니다.
+>     2. 첫번째 sub_menu(인덱스 0번째)를 $box(<div class=box>)에 감싸(wrap)집니다.(sub_menu가 하위로 들어가짐)
+>
+>   * ```
+>     	$(".sub_menu").click(function(){
+>     		$(".sub_menu").each(function(){
+>     			if($(this).parent().is(".box")){
+>     				$(this).unwrap(".box");
+>     			}
+>     		})
+>     		$(this).wrap($box);
+>     	})
+>     ```
+>
+>     1. sub_menu를 클릭시 실행되는 함수입니다.
+>     2. sub_menu의 전부(i) 하나하나 확인하는 함수입니다. 
+>     3. 만약 지금(i)의 부모가 box라면 지금(i)의 박스를 해제(unwrap)합니다
+>     4. each문을 벗어나고 click 상태에서 지금 클릭한 것은 변수 $box로 감싸줍니다
+>
+>   * ```
+>     	$("a").wrapInner("<span></span>");
+>     ```
+>
+>     * a를 찾아서 a의 안에를 <span>으로 감싸줍니다.
+>
+>   * ```
+>     	$("a").wrapAll("<b></b>");
+>     })
+>     ```
+>
+>     * a를 찾아서 한곳에 묶어 <b>로 감싸줍니다.
+>
+> * body입니다.
+>
+>   * ```
+>     <div id="menu">
+>     	<div class="sub_menu">
+>     		<a href="#"><span>공부</span></a>
+>     	</div>
+>     	<div class="sub_menu">
+>     		<a href="#">study</a>
+>     	</div>
+>     	<div class="sub_menu">
+>     		<a href="#">html</a>
+>     	</div>
+>     	<div class="sub_menu">
+>     		<a href="#">javascript</a>
+>     	</div>
+>     	<div class="sub_menu">
+>     		<a href="#">jq</a>
+>     	</div>
+>     </div>
+>     ```
+
