@@ -926,7 +926,7 @@
 >        2. 없다면
 >           1. 선택한 이미지에 addsize(style) 더해줍니다. 그리고 tittle에 이미지 확대됨을 써줍니다.
 
-## insert
+## insert (inside)
 
 > * head입니다
 >
@@ -980,5 +980,60 @@
 >
 >     * 각 버튼을 눌렀을때 추가되는 위치나 바뀌는 위치입니다.
 
+## insert (outside)
 
+> * head부분입니다.
+>
+>   * ```
+>     $(function(){
+>     	$("button:eq(0)").click(function(){
+>     		$("#base").after("<div>새로운 엘리먼트(after)</div>");
+>     	});
+>     	$("button:eq(1)").click(function(){
+>     		$("<div>새로운 엘리먼트(inserAfter)</div>").insertAfter("#base");
+>     	});
+>     	$("button:eq(2)").click(function(){
+>     		$("#base").before("<div>새로운 엘리먼트(before)</div>");
+>     	});
+>     	$("button:eq(3)").click(function(){
+>     		$("<div>새로운 엘리먼트(insertBefore)</div>").insertBefore("#base");
+>     	});
+>     });
+>     ```
+>
+>     * 버튼 인덱스 0번째를 클릭시 실행되는 함수입니다.
+>
+>       * base의 뒤에 div태그 내용은 새로운 엘리먼트(after) 가 추가됩니다. 
+>
+>     * 버튼 인덱스 1번째를 클릭시 실행되는 함수입니다.
+>
+>       * div태그이고 내용은 새로운 엘리먼트(inserAfter)가 base 뒤에 추가됩니다.
+>
+>     * 버튼 인덱스 2번째를 클릭시 실행되는 함수입니다.
+>
+>       * base의 앞에 div태그 내용은 새로운 엘리먼트(before) 가 추가됩니다
+>
+>     * 버튼 인덱스 3번째를 클릭시 실행되는 함수입니다.
+>
+>       * div태그이고 내용은 새로운 엘리먼트(inserBefore)가 base 앞에 추가됩니다
+>
+>       ✅after,before은 타겟을 앞에 잡고 만들기 때문에 함수를 내용에 추가할수 있습니다✅
+>
+>       ✅inserAfter, inserBefore은 함수를 쓸수 없습니다. ✅
+>
+> * body입니다
+>
+>   * ```
+>         <button>after()</button>		0️⃣
+>         <button>inserAfter()</button>	1️⃣
+>         <button>before()</button>		2️⃣
+>         <button>insertBefore()</button> 3️⃣
+>     		0️⃣	1️⃣
+>         <div id="base">
+>             <p>외부 삽입</p>
+>         </div>
+>         	2️⃣	3️⃣
+>     ```
+>
+>     * 각각 누를시 들어가는 위치입니다.
 
