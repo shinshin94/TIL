@@ -1244,3 +1244,50 @@
 >     </div>
 >     ```
 
+## delete
+
+> **remove, detach, empty의 사용법입니다.**
+>
+> * head입니다.
+>
+>   * ```
+>     $(document).ready(function(){
+>     	$("p:eq(0)").click(function(){
+>     		$(this).remove();
+>     	})
+>     
+>     	$("p:eq(1)").click(function(){
+>     		var ele = $(this).detach();
+>     		$("h1").append(ele);
+>     	})
+>     
+>     	$("p:eq(2)").click(function(){
+>     		$(this).parent().empty();
+>     	})
+>     })
+>     ```
+>
+>     * p의 인덱스 0번째를 클릭시 실행되는 함수입니다.
+>       * 클릭한 p를 제거합니다
+>     * p의 인덱스 1번째를 클릭시 실행되는 함수입니다.
+>       * 변수 ele에 선택한p의 제거값을 저장합니다.
+>       * h1에 변수 ele의 내용을 추가합니다.
+>     * p의 인덱스 2번째를 클릭시 실행되는 함수입니다.
+>       * 지금 선택한 p의 부모(div)의 내용을 제거합니다
+>
+> * body입니다
+>
+>   * ```
+>     <h1>엘리먼트 제거하기</h1>
+>     <div>
+>     	<p>remove()</p>
+>     	<p>detach()</p>
+>     	<p>empty()</p>
+>     </div>
+>     ```
+>
+>     * remove()를 클릭시 <p>remove()</p>가 제거
+>     * detach()클릭시 ele변수 저장되고 제거
+>     * empty()클릭시 div안의 내용 제거
+
+## 
