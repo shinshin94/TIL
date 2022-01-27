@@ -1081,3 +1081,86 @@
 >     ```
 >
 >     * 둘다 버튼을 누를시 "DOM 대체" 부분이 바뀝니다
+
+## slotmachine
+
+> * style입니다.
+>
+>   * ```
+>     <style>
+>     	img{
+>     	width: 150px;
+>     	height: 150px;
+>     	float: left;
+>     	}
+>     	#menubox{position: relative;}
+>     	#menu{overflow: auto;}
+>     	.sel{
+>     	width: 140px;
+>     	height: 140px;
+>     	border: 5px dotted red;
+>     	position: absolute;
+>     	left: 300px;
+>     	}
+>     	button{
+>     	width: 150px;
+>     	height: 50px;
+>     	margin-left: 300px;
+>     }
+>     </style>
+>     ```
+>
+>     * 이미지 크기 가로 150px, 높이 150px 왼쪽 정렬으로 지정해주었습니다
+>     * 부모는 menubox 입니다
+>     * menu가 ovreflow될시 자동으로 형태를 맞춰줍니다
+>     * sel은 가로 140px 높이 140p 5px 단위의 도트 레드로 찍히며 위치는 부모기준 왼쪽에서 300px 입니다.
+>     *  버튼의 크기는 가로150px 높이 50px 왼쪽으로부터 300 거리입니다
+>
+> * head입니다.
+>
+>   * ```
+>     <script>
+>     	$(function(){
+>     		setInterval(function(){
+>     			var div = $("#menu");
+>     			$(".active").first().appendTo(div);
+>     		},150);
+>     		$("button").click(function(){
+>     			$("img").toggleClass("active");
+>     			if($("button").text() == "start"){
+>     				$("button").text("stop");
+>     			} else {
+>     				$("button").text("start");
+>     			}
+>     		})
+>     	})
+>     </script>
+>     ```
+>
+>     1. setInterval 함수입니다.
+>     2. 변수 div에 menu를 저장해둡니다.
+>     3. active 클래스 를 생성하고 첫번째 div에 append div(menu의 내용)를 추가해줍니다 150밀리세컨트 마다.
+>     4. 버튼을 클릭시 함수가 실행됩니다.
+>     5. 이미지의 클래스가"active"가 보이거나 사라집니다.
+>        1. 만약 버튼의 text가 start라면 버튼의 text를 stop으로 바꿔줍니다
+>        2. 아니라면 버튼의 text를 start로 바꿔줍니다.
+>
+> * body입니다.
+>
+>   * ```
+>     <div id="menubox">
+>     	<div class="sel"></div>
+>     
+>     	<div id="menu">
+>     		<img src="resources/imgs/img01.png" alt="img01"/>
+>     		<img src="resources/imgs/img02.png" alt="img02"/>
+>     		<img src="resources/imgs/img03.png" alt="img03"/>
+>     		<img src="resources/imgs/img04.png" alt="img04"/>
+>     		<img src="resources/imgs/img05.png" alt="img05"/>
+>     		<img src="resources/imgs/img06.png" alt="img06"/>
+>     	</div>
+>     
+>     <button>start</button>
+>     ```
+>
+>     * div위에 6개의 이미지가 가로로 정렬되고 붉은 도트점 상자 그리고 이미지 밑에는 stop 버튼이 있습니다.
