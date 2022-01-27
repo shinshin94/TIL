@@ -928,6 +928,8 @@
 
 ## insert (inside)
 
+> **prepend, append의 사용법입니다.**
+>
 > * head입니다
 >
 >   * ```
@@ -982,6 +984,8 @@
 
 ## insert (outside)
 
+> **after,before,insertAfter,inserBefore의 사용법입니다**
+>
 > * head부분입니다.
 >
 >   * ```
@@ -1037,3 +1041,43 @@
 >
 >     * 각각 누를시 들어가는 위치입니다.
 
+## replace
+
+> **replaceWith 와 replaceAll의 사용법입니다.**
+>
+> * head입니다.
+>
+>   * ```
+>     $(function(){
+>     	$("button:first").click(function(){
+>     		$("p").replaceWith("<p><b>replaceWith()</b></p>")
+>     	});
+>     	$("button:last").click(function(){
+>         	$("<p><b>replaceAll()</b></p>").replaceAll("p");
+>     	})
+>     })
+>     ```
+>
+>     * 첫번째(인덱스 0번째) 버튼을 누를시 실행되는 함수입니다
+>
+>       * p 의 부분을 `<p><b>replaceWith()</b></p>`인 것으로 교체합니다.
+>
+>     * 마지막(인덱스 -1번째) 버튼을 누를시 실행되는 함수입니다
+>
+>       * 내용이 `<p><b>replaceAll()</b></p>` 형식을 적용하여 p부분에 교체해줍니다
+>
+>       ✅replaceWith는 함수를 적용할수 있지만 replaceAll은 타겟이 뒤라서 불가능합니다✅
+>
+> * body입니다.
+>
+>   * ```
+>     <body>    
+>         <div>
+>             <p>DOM 대체</p>
+>         </div>
+>         <button>바꾸기(replaceWith)</button>
+>         <button>바꾸기(replaceAll)</button>
+>     </body>
+>     ```
+>
+>     * 둘다 버튼을 누를시 "DOM 대체" 부분이 바뀝니다
