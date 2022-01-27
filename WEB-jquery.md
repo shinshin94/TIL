@@ -1290,4 +1290,137 @@
 >     * detach()클릭시 ele변수 저장되고 제거
 >     * empty()클릭시 div안의 내용 제거
 
-## 
+## ajax
+
+> **jquery에서의 ajax입니다**
+>
+> 1. url  :통신할 경로(주소) ✅
+>
+> 2. method : 전송 방식(get(default) /post)
+>
+> 3. async : 비동기(defalut)/동기
+>
+> 4. dataType : 전송받을 데이터의 타입(xml,json,html,script,...) 
+>
+> 5. data:{"key":value},  : 전송할 데이터
+>
+> ✅ 친것만 사용해도 작동은 합니다.
+>
+> * style입니다.
+>
+>   * ```
+>     <style>
+>     	*{margin: 0px; padding: 0px;}
+>     	table{width: 400px;}
+>     	table tr:nth-child(odd){background-color: orange;}
+>     	fieldset{width: 400px;}
+>     	body{width: 1000px; margin: 50px auto;}
+>     </style>
+>     ```
+>
+>     1. 테이블 가로 400px
+>     2. 테이블의 tr의 홀수번째에 배경색상 오렌지를 줍니다
+>     3. fieldset의 가로는 400px입니다.
+>     4. body의 가로는 1000px 여백 50
+>
+> * head입니다.
+>
+>   * ```
+>     $(function(){
+>     	$("#emp_search").click(function(){
+>     		var empid = $("input[name=empid]").val();
+>     		if (!isNaN(empid) && (empid >= 100) && (empid <=206)){
+>     			$.ajax({
+>     				url:"emplist.xml",                 
+>     				method:"get",                       
+>     				async:true,                        
+>     				dataType:"xml",                                   
+>                     success:function(data){            
+>                     	var empInfo = $(data).find("EMPLOYEE_ID:contains("+empid+")").parent();
+>                     	if((empInfo).is("ROW")){
+>                     		$("table input").each(function(i){
+>     							$(this).val($(empInfo).children().eq(i).text());
+>     						})
+>     					} else {
+>     						alert("검색 대상이 존재하지 않습니다...")
+>     					}
+>     				},
+>     				error:function(request,error){      
+>     					alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+>     				}
+>     			})
+>     
+>     		} else{
+>     			alert("사원번호를 다시 확인해주세요")
+>     		}
+>     	})
+>     })
+>     ```
+>
+>     1. emp_search 클릭시 실행되는 함수입니다.
+>        1. 변수 empid에 name empid에 입력된 값을 가져옵니다
+>        2. 만약 empid의 값이 없지 않다면 그리고(&&) empid의 값이 100보다 크거나 같다면 (&&) empid의 값이 206보다 작거나 같다면
+>           1. ajax를 호출합니다
+>              1. 주소는 emplist.xml
+>              2. 전송방식은 get
+>              3. 비동기 true
+>              4. 데이터타입 xml
+>              5. 호출 성공시 실행 함수(data)
+>                 1. 변수 empInfo에 data에서  EMPLOYEE_ID : 특정문자열 empid(2번에서 받아온값입니다)과 일치하는 부모를 찾아서 가져옵니다.
+>                 2. 만약 empInfo가 ROW라면
+>                    1. table input에 각각의 function(i) 함수를 실행합니다.
+>                       1. 선택한것의 내용은(empInfo의 자식들에 i번쨰 인덱스의 text입니다.)
+>                 3. 만약 아니라면
+>                    1. "검색 대상이 존재하지 않습니다..." 창을 띄웁니다
+>              6. 호출 실패시 실행 함수(요청,에러)입니다
+>                 1. "code"+실패 코드 +다음줄+ "message"+ 요청에 대한 내용+다음줄+"error"+에러 내용
+>        3. 만약 empid값이 맞지않다면
+>           1. ""사원번호를 다시 확인해주세요"" 창을 띄웁니다
+>
+> * body입니다.
+>
+>   * ```
+>     <body>    
+>         <h1>데이터 가져오기</h1>
+>         <fieldset>
+>             <legend>사원정보 조회</legend>
+>             <input type="text" name="empid"/>
+>             <input type="button" id="emp_search" value="조회"/>
+>         </fieldset>
+>         <table>
+>             <tr>
+>                 <th>사원번호</th>
+>                 <td><input type="text" name="empnum" /></td>
+>             </tr>
+>             <tr>
+>                 <th>이    름</th>
+>                 <td><input type="text" name="lastname" /></td>
+>             </tr>
+>             <tr>
+>                 <th>이 메 일</th>
+>                 <td><input type="text" name="email" /></td>
+>             </tr>
+>             <tr>
+>                 <th>전화번호</th>
+>                 <td><input type="text" name="phone" /></td>
+>             </tr>
+>             <tr>
+>                 <th>입사일</th>
+>                 <td><input type="text" name="hire" /></td>
+>             </tr>
+>         </table>
+>     </body>
+>     ```
+>
+> * 가져올 내용
+>
+>   * ```
+>     <ROWSET>
+>       <ROW>
+>         <EMPLOYEE_ID>100</EMPLOYEE_ID>
+>         <LAST_NAME>King</LAST_NAME>
+>         <EMAIL>SING</EMAIL>
+>         <PHONE_NUMBER>111.111.4567</PHONE_NUMBER>
+>         <HIRE_DATE>1187. 6. 17 오전 12:00:00</HIRE_DATE>
+>       </ROW>
+>     ```
