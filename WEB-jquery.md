@@ -36,7 +36,7 @@
 >     	$("#test-btn").click(function(){
 >     		alert("클릭했음!!");
 >     	});
->           
+>             
 >     	$("img").click(function(){
 >     		$(this).hide();
 >     	});
@@ -511,7 +511,7 @@
 >     	<b>first() : 선택한 엘리먼트들 중에 첫번째 요소</b>
 >     	<b>last() : 선택한 엘리먼트들 중에 마지막 요소</b>
 >     </pre>
->       
+>         
 >     <div>
 >     	<p>eq()</p>
 >     	<p>slice</p>
@@ -575,7 +575,7 @@
 >     	<b>parent() / parents("selector") : 선택한 엘리먼트의 부모 / 조상 탐색</b>
 >     	<b>next("selector") : 선택한 엘리먼트 다음에 따라오는 요소 탐색</b>       
 >     </pre>
->       
+>         
 >     <div>
 >     	<p><b>1</b></p>
 >     	<p id="chd">2</p>
@@ -627,7 +627,7 @@
 >   * ```
 >     $(function(){
 >     	$("p:eq(0)").add("span").css("color","red")
->         
+>             
 >     	$("div").children().click(function(){
 >     		if($(this).prop("tagName")=="SPAN"){
 >     			alert("span tag click!!!");
@@ -666,7 +666,7 @@
 >    	<div>.first()</div>
 >    	<div>.last()</div>
 >    	</div>
->       
+>          
 >    <div id="menu2" class="menu">
 >    	<a href="#b">트리 탐색 메서드</a>
 >    	<div>.find()</div>
@@ -674,7 +674,7 @@
 >    	<div>.parent()</div>
 >    	<div>.next()</div>
 >    </div>
->       
+>          
 >    <div id="menu3" class="menu">
 >    	<a href="#c">탐색 메서드</a>
 >    	<div>.add()</div>
@@ -739,7 +739,7 @@
 >     	</p>
 >     	<p>클릭</p>
 >     </div>
->       
+>         
 >     <div>
 >     	<p>
 >     		<a href="http://www.google.com">클릭!</a>
@@ -778,7 +778,7 @@
 >     		"mouseout":function(){
 >     			$(this).css("color","");
 >     		}
->         
+>             
 >     	});
 >     ```
 >
@@ -906,7 +906,7 @@
 >     	$("#btn").click(function(){
 >     		$("img").toggleClass("onoff")
 >     	})
->     
+>         
 >     	$("img").click(function(){
 >     		if($(this).hasClass("addsize")){
 >     			$(this).removeClass("addsize").attr("title","이미지 축소됨");
@@ -969,13 +969,13 @@
 >         <button>append</button>  1️⃣
 >         <button>html</button>    2️⃣
 >         <button>txt</button>     3️⃣
->         
+>             
 >         0️⃣
 >         <div>
 >            2️⃣ <p>내부 삽입1</p>  3️⃣
 >            2️⃣ <p>내부 삽입2</p>  3️⃣
 >         </div>
->         
+>             
 >         1️⃣
 >     </body>
 >     ```
@@ -1150,7 +1150,7 @@
 >   * ```
 >     <div id="menubox">
 >     	<div class="sel"></div>
->     
+>         
 >     	<div id="menu">
 >     		<img src="resources/imgs/img01.png" alt="img01"/>
 >     		<img src="resources/imgs/img02.png" alt="img02"/>
@@ -1159,7 +1159,7 @@
 >     		<img src="resources/imgs/img05.png" alt="img05"/>
 >     		<img src="resources/imgs/img06.png" alt="img06"/>
 >     	</div>
->     
+>         
 >     <button>start</button>
 >     ```
 >
@@ -1255,12 +1255,12 @@
 >     	$("p:eq(0)").click(function(){
 >     		$(this).remove();
 >     	})
->     
+>       
 >     	$("p:eq(1)").click(function(){
 >     		var ele = $(this).detach();
 >     		$("h1").append(ele);
 >     	})
->     
+>       
 >     	$("p:eq(2)").click(function(){
 >     		$(this).parent().empty();
 >     	})
@@ -1349,7 +1349,7 @@
 >     					alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
 >     				}
 >     			})
->     
+>       
 >     		} else{
 >     			alert("사원번호를 다시 확인해주세요")
 >     		}
@@ -1424,3 +1424,202 @@
 >         <HIRE_DATE>1187. 6. 17 오전 12:00:00</HIRE_DATE>
 >       </ROW>
 >     ```
+
+## menu
+
+> **hide(),show(),toggle(),slideUp(),slideDown(),slideToggle()**
+>
+> **fadeOut(),fadeIn(),fadeTo(),fadeToggle(),animate()를 사용한 메뉴만들기입니다.**
+>
+> * style입니다.
+>
+>   * ```
+>     <style>
+>         img{
+>             width: 200px;
+>             height: 200px;
+>             position: absolute;
+>             left: 200px;
+>             top: 100px;
+>         }
+>         p{
+>             width: 100px;
+>             border: 1px solid red;
+>             position: absolute;
+>             left: 10px;
+>             display: none;
+>         }
+>     </style>
+>     ```
+>
+>     * img는 가로 200px 높이 200px 위치는 상대적으로 왼쪽 200px 위에서 100px위치에 생성합니다.
+>     * p는 가로100px 굵기1px 붉은색상입니다. 위치는 상대적이며 왼쪽 10px 표시는 none
+>
+> * head입니다.
+>
+>   * ```
+>     $(function(){
+>     	$("b").click(function(){
+>     		$("p").toggle();
+>     		$("p").each(function(i){
+>     			$(this).animate({
+>     				"top":50*(i+1)+ "px"
+>     			},1000);
+>     		})
+>     	})
+>     ```
+>
+>     1. b를 클릭했을때 실행되는 함수입니다.
+>        1. p를 숨기기/보이기 합니다.
+>        2. p의 각각에 다음 함수(인덱스 i번째에)를 적용합니다.
+>           1. 지금 선택된것에 움직임(animate)을 줍니다
+>              1. 위에서부터 50*(i+1) px로 줍니다.
+>           2. 1000밀리세컨드의 속도로
+>
+>   * ```
+>         $("p").on("click",function(){
+>             var ele = $(this);
+>             ele.css("background","hotpink");
+>             ele.siblings("p").css("background-color","")
+>     ```
+>
+>     1. p를 클릭했을때 실행되는 함수입니다.
+>        1. 변수 ele는 지금 선택한것 p 입니다.
+>        2. ele에 배경은 핫핑크 색상으로 바뀝니다.
+>        3. ele의 형제들 p에겐 배경색상을 없게 해줍니다.
+>
+>   * ```
+>             if(ele.is("p:contains(hide)")){
+>             	$("img").hide();
+>             }
+>     ```
+>
+>        					1. 만약 ele가 <p>hide</P>를 선택한 것이라면
+>                					1. 이미지를 숨깁니다.
+>
+>   * ```
+>             if(ele.is("p:contains(show)")){
+>             	$("img").show()
+>             }
+>     ```
+>
+>     1. 만약 ele가 <p>show</P>를 선택한 것이라면
+>        					1. 이미지를 보여줍니다.
+>
+>   * ```
+>             if(ele.is("p:contains(toggle)")){
+>             	$("img").toggle();
+>             }
+>     ```
+>
+>     1. 만약 ele가 <p>toggle</P>를 선택한 것이라면
+>        					1. 이미지를 숨기기/보이기 해줍니다.
+>
+>   * ```
+>             if(ele.is("p:contains(slideUp)")){
+>             	$("img").slideUp();
+>             }
+>     ```
+>
+>     1. 만약 ele가 <p>slideUp</P>를 선택한 것이라면
+>        					1. 이미지를 슬라이드업하여 가립니다.
+>
+>   * ```
+>             if(ele.is("p:contains(slideDown)")){
+>             	$("img").slideDown();
+>             }
+>     ```
+>
+>     1. 만약 ele가 <p>slideDown</P>를 선택한 것이라면
+>        					1. 이미지를 슬라이드 다운 하여 보여줍니다.
+>
+>   * ```
+>             if(ele.is("p:contains(slideToggle)")){
+>             	$("img").slideToggle()
+>             }
+>     ```
+>
+>     1. 만약 ele가 <p>slideToggle</P>를 선택한 것이라면
+>        					1. 이미지를 슬라이드하며 가리기/보이기 해줍니다.
+>
+>   * ```
+>             if(ele.is("p:contains(fadeOut)")){
+>             	$("img").fadeOut();
+>             }
+>     ```
+>
+>     1. 만약 ele가 <p>fadeOut</P>를 선택한 것이라면
+>        					1. 이미지가 서서히 사라집니다.
+>
+>   * ```
+>             if(ele.is("p:contains(fadeIn)")){
+>             	$("img").fadeIn();
+>             }
+>     ```
+>
+>     1. 만약 ele가 <p>fadeIn</P>를 선택한 것이라면
+>        					1. 이미지를 서서히 보여줍니다.
+>
+>   * ```
+>             if(ele.is("p:contains(fadeTo)")){
+>             	$("img").fadeTo(4000,0.2)
+>             }
+>     ```
+>
+>     1. 만약 ele가 <p>fadeTo</P>를 선택한 것이라면
+>        					1. 이미지를 서서히 사라짐/ 보이게 해줍니다 속도는 4000 밀리세컨드에 투명도는 0.2입니다 
+>
+>   * ```
+>             if(ele.is("p:contains(fadeToggle)")){
+>             	$("img").fadeToggle();
+>             }
+>     ```
+>
+>     1. 만약 ele가 <p>fadeToggle</P>를 선택한 것이라면
+>        					1. 이미지를 서서히 사라짐/보이기 해줍니다.
+>
+>   * ```
+>             if(ele.is("p:contains(animate)")){
+>             	$("#image01").animate({
+>                 	"width" :"500px",
+>                 	"height" : "500px",
+>                 	"left" : "600px",
+>                 	"top":"0px"
+>                 },2000)
+>             }
+>     	})
+>     })
+>     ```
+>
+>     1. 만약 ele가 <p>animate</p> 라면
+>        1.  id image01을 찾아서 움직임 효과를 줍니다.
+>           1. 가로 500px 크기에
+>           2. 높이 500px 크기로 바뀌고
+>           3. 왼쪽에서 600px 위치로
+>           4. 위에서 0px  위치로 바뀝니다.
+>        2. 2000밀리세컨드의 속도로
+>
+> * body 입니다.
+>
+>   * ```
+>     <body>    
+>         <b>메뉴</b>
+>         <div>
+>             <p>hide()</p>
+>             <p>show()</p>
+>             <p>toggle()</p>
+>             <p>slideUp()</p>
+>             <p>slideDown()</p>
+>             <p>slideToggle()</p>
+>             <p>fadeOut()</p>
+>             <p>fadeIn()</p>
+>             <p>fadeTo()</p>
+>             <p>fadeToggle()</p>
+>             <p>animate()</p>
+>         </div>
+>         <img src="이미지경로/img01.png" alt="image01" id="image01"/>
+>     </body>
+>     ```
+>
+>     * 각각의 함수를 호출할 P들입니다.
+
