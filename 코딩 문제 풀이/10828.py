@@ -1,18 +1,24 @@
-N=list(map(int,input().split()))
-M=[]
-def cou(i):
-    x=2
-    for x in range(i):
-        if (i % x) ==0:
-            break
+#스택 연습
+N=int(input())
+stack=[]
+for i in range (N):
+    x=list(input().split())
+    if x[0] == "push":
+        stack.append(x[1])
+    elif x[0] == "pop":
+        if len(stack)==0:
+            print(-1)
         else:
-            continue
-        M.append(i)
-for z in N:
-    if z == 1:
-        continue
-    else:
-        cou(z)
-print(len(M))
-
-
+            stack.pop()
+    elif x[0] == "size":
+        print(len(stack))
+    elif x[0] == "empty":
+        if len(stack) ==0:
+            print(1)
+        else:
+            print(0)
+    elif x[0] == "top":
+        if len(stack) == 0:
+            print(-1)
+        else:
+            print(stack[-1])
