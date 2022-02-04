@@ -1,5 +1,8 @@
 # Django
 
+> *  프레임 워크 
+>   * 공통적인 부분이 이미 만들어져있고 유니크한 부분은 직접 작성해 완성하는것
+
 ## 가상 환경
 
 > 1. virtual environments (venv)
@@ -56,6 +59,10 @@
 >   			   			   TEMPLATE
 >   			   			   (*.html)
 >   ```
+>
+>   * `manage.py` 장고의 전체적인 동작 관리
+>   * `settings.py` 설정을 지정
+>   * `urls.py ` 요청을 처리해줌
 >
 > * cmd창 사용
 >
