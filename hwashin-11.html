@@ -17,6 +17,9 @@
             font-size: 60%;
             color: #03c75a;
         }
+        #top3 > a {
+            text-decoration-line: none;
+        }
         #ad1 {
             width:750px;
             height:165px;
@@ -57,12 +60,20 @@
             top: 160px;
             color : #03c75a;
         }
+        #menu > a{
+            text-decoration-line: none;
+        }
         #logo{
             position: absolute;
-            left: 220px;
+            left: 260px;
             width: 1130px;
             height: 160px;
             font-size: 52px;
+        }
+        #mainlogo{
+            position: absolute;
+            left: 220px;
+            font-size: 52px
         }
         #search{
             width: 530px;
@@ -78,7 +89,200 @@
             top:11px
 
         }
+        #hr1 {
+            position: relative;
+            width: 100%;
+            top: 125px;
+            border: 1px solid #dae1e6;
+        }
+        #hr2{
+            position: relative;
+            width: 100%;
+            top: 160px;
+            border: 1px solid #dae1e6;
+        }
+        #news1 {
+            padding: 15px 15px 0px 15px;
+            width:720px;
+            height:40px;
+            float: left;
+            position: absolute;
+            left: 220px;
+            top : 397px;
+            border: 1px solid #dae1e6;
+            background-color: #f7f9fa;
+            overflow:hidden;
+        }
+        #news1 > a{
+            text-decoration-line: none;
+            color: black;
+        }
 
+        #news2 {
+            padding: 15px 15px 0px 15px;
+            border: 1px solid #dae1e6;
+            width: 322px;
+            height: 40px;
+            background-color: #f7f9fa;
+            position: absolute;
+            left : 990px;
+            top : 397px;
+        }
+
+        #news3 {
+            width:720px;
+            height:40px;
+            float: left;
+            position: absolute;
+            left: 220px;
+            top : 472px;
+        }
+        #news3 > a{
+            text-decoration-line: none;
+            color: black;
+        }
+
+
+        #ad2 {
+            position: absolute;
+            left : 990px;
+            top : 472px;
+            object-fit: fill;
+        }
+        #newstable {
+            padding: 0px 0px 22px;
+            border: 1px solid #dae1e6;
+            border-collapse: collapse;
+            width: 744px; 
+            height: 244px;
+            position: absolute;
+            left: 220px;
+            top : 522px;
+            float: left;
+            
+        }
+        #newstable > tbody,thead,tfoot,th {
+            width: 124px;
+            height: 61px;
+            border: 1px solid #dae1e6;
+            border-collapse: collapse;
+
+        }
+
+        #ad3 {
+            position: absolute;
+            left : 990px;
+            top : 702px;
+            font-size: 20px;           
+        }
+
+        #shoppingsite {
+            padding: 12px 0px 0px 10px;           
+            letter-spacing: -.25px;
+            font-size: 12px;
+            width: 347px;
+            height: 48px;
+            border: 1px solid #dae1e6;
+            background-color: #f7f9fa;
+            position: absolute;
+            left : 990px;
+            top : 752px;
+            float: right; 
+        }
+        #shoppingsite > a{
+            text-decoration-line: none;
+            color: black;
+        }
+        #shopSep {
+        margin: 10px 12px 0;
+        }
+        #shopSep2 {
+        margin: 10px 6px 0;
+        }
+
+        #todaything{
+            left: 220px;
+            top: 806px;
+            position: absolute;
+        }
+        #todaything > a{
+            text-decoration-line: none;
+        }
+        #fun{
+            padding: 0px 0px 22px;
+            border: 1px solid #dae1e6;
+            border-collapse: collapse;
+            width: 744px; 
+            height: 50px;
+            left: 220px;
+            top: 846px;
+            position: absolute;
+        }
+        #fun >th {
+            width: 94px;
+            height: 50px;
+            border: 1px solid #dae1e6;
+            border-collapse: collapse;
+        }
+
+        #notme{
+            left: 220px;
+            top: 936px;
+            position: absolute;
+            float: left;
+        }
+
+        #message1 {
+            left: 600px;
+            top: 936px;
+            height: 100px;
+            position: absolute;
+        }
+        #message1 > img {
+            float: left;
+        }
+        #message1 > a {
+            text-decoration-line: none;
+            color: black;
+        }
+
+        #message2 {
+            left: 600px;
+            top: 1056px;
+            height: 100px;
+            position: absolute;
+        }
+        #message2 > img {
+            float: left;
+        }
+        #message2 > a {
+            color: black;
+            text-decoration-line: none;
+        }
+
+        #message3 {
+            left: 600px;
+            top: 1176px;
+            height: 100px;
+            position: absolute;
+        }
+        #message3 > img {
+            float: left;
+        }
+        #message3 > a {
+            color: black;
+            text-decoration-line: none;
+        }
+        #shoppingads{
+            padding: 0px 0px 0px 10px;
+            position: absolute;
+            left: 990px;
+            top:810px;
+            width: 347px;
+            height: 744px;
+            border: 1px solid #dae1e6;
+            background-color: white;           
+        }
 
     </style>
 </head>
@@ -88,9 +292,16 @@
         <a href="https://jr.naver.com/">쥬니어 네이버</a>
         <a href="https://happybean.naver.com/">해피빈</a>
     </div>
-    <div id="logo">NAVER<input id="search" type="txt"><a id="searchfind" href="search.html"><img src="image/search.png"></a></div>
+    <div id="mainlogo">
+        <a href="https://www.naver.com/"><img src="image/logo.png" width="222px" height="62px"/></a>
+    </div>
+
+    <div id="logo"><input id="search" type="txt"><a id="searchfind" href="search.html"><img src="image/search.png"></a></div>
+    
+    <hr id="hr1"></hr>
     <div id="menuline">
         <div id="menu">
+            <b>
             <th>메일</th>
             <th>카페</th>
             <th>블로그</th>
@@ -106,8 +317,8 @@
             <th>지도</th>
             <th>VIBE</th>
             <th>책</th>
-            <th>웹툰</th>
-            <button>더보기</button>
+            <th>웹툰</th></b>
+            <a href="">더보기</a>
             <th>        </th>
             <th></th>
             <div id="weather">
@@ -115,7 +326,7 @@
             </div>
         </div>
     </div>
-
+    <hr id="hr2"></hr>
     <div id="ad1">
         <a href="movie.html">
             <img src="image/interstella.jpg"/>
@@ -133,6 +344,99 @@
         </tr>
 
     </form>
+    <div id="news1">
+        <a href="https://news.naver.com/main/list.naver?mode=LPOD&mid=sec&sid1=001&sid2=140&oid=001&isYeonhapFlash=Y">연합 뉴스 &gt;</a><td></td>
+    </div>
+    <div id="news2">
+        <td>오늘의 운세?</td>
+    </div>
+
+    <div id="news3">
+        <a href="http://newsstand.naver.com/">뉴스스탠드 &gt;&nbsp;</a><a href="https://www.naver.com/#">구독한 언론사</a><a id="shopSep">.</a><a href="https://www.naver.com/#">전체언론사</a>
+    </div>
+    <div id="ad2">
+        <a href="house.html">
+            <img src="image/house.jpg" width="350px" height="200px"/>
+        </a>
+
+    </div>
+    <table id="newstable">
+        <thead>
+            <th>서울신문</th>
+            <th>MBC</th>
+            <th>미디어오늘</th>
+            <th>데일리안</th>
+            <th>OSEN</th>
+            <th>프레시안</th>
+        </thead>
+        <tbody>
+            <th>매일경제</th>
+            <th>AI타임스</th>
+            <th>YTN사이언스</th>
+            <th>arirang</th>
+            <th>뉴스포스트</th>
+            <th>산업일보</th>
+        </tbody>
+        <tbody>
+            <th>inven</th>
+            <th>job&joy</th>
+            <th>조이뉴스24</th>
+            <th>쿠키뉴스</th>
+            <th>씨네21</th>
+            <th>초이스경제</th>
+        </tbody>
+        <tfoot>
+            <th>신아일보</th>
+            <th>코메디닷컴</th>
+            <th>HelloDD</th>
+            <th>sciencetimes</th>
+            <th>SPORTQ</th>
+            <th>NextDaily</th>
+        </tfoot>
+    </table>
+    <div id="ad3">
+        <a>트렌드 쇼핑</a><a>상품</a><a>쇼핑몰</a><a>Men</a>
+    </div>
+    <div id="shoppingsite">
+        <a href="https://www.coupang.com/"><b>쿠팡</b></a><a id="shopSep">.</a><a href="https://www.gmarket.co.kr/">G마켓</a><a id="shopSep">.</a><a href="http://www.auction.co.kr/">옥션</a><a id="shopSep">.</a><a href="https://www.11st.co.kr/main"><b>11번가</b></a><a id="shopSep">.</a><a href="http://www.ssg.com/">이마트몰</a><a id="shopSep">.</a><a href="https://www.tmon.co.kr/">티몬</a>
+        </br>
+        <a href="http://shinsegaemall.ssg.com/"><b>신세계몰</b></a><a id="shopSep2">.</a><a href="https://front.wemakeprice.com/main">위메프</a><a id="shopSep2">.</a><a href="https://www.oliveyoung.co.kr/store/main/main.do?oy=0">올리브영</a><a id="shopSep2">.</a><a href="https://with.gsshop.com/index.gs">GS샵</a><a id="shopSep2">.</a><a href="https://www.lotteimall.com/">롯데i몰</a><a id="shopSep2">.</a><a href="https://display.cjonstyle.com/"><b>CJ온스타일</b></a>
+    </div>
+    <div id="todaything">
+        <a href="https://www.acmicpc.net/">오늘의 재미</a>
+    </div>
+    <table id="fun">
+        <th>엔터</th><th>스포츠</th><th>웹툰</th><th>자동차</th><th>경제M</th><th>MY구독</th><th>레시피</th><th>책방</th>
+    </table>
+
+    <div id="notme">
+        <img src="image/notme.gif" alt="설마 내꺼 검사하겠음?" width="350px" height="200px">
+    </div>
+    <div id="message1">
+        <img src="image/food.jpg" width="100px" height="100px">
+        <td><font size="4px" color="red">&nbsp;술 마시기 좋은 이곳은?!</font></td>
+        </br>
+        </br>
+        <a href="drink.html">&nbsp;&nbsp;&nbsp;분위기 진짜..</a>
+        </br>
+    </div>
+    <div id="message2">
+        <img src="image/jeju.JPG" width="100px" height="100px">
+        <td><font size="4px" color="red">&nbsp;오늘 노을 보러 갈래?</font></td>
+        </br>
+        </br>
+        <a href="view.html">&nbsp;&nbsp;나는 여기 ㅎㅎ</a>
+    </div>
+    <div id="message3">
+        <img src="image/ho.JPG" width="100px" height="100px">
+        <td><font size="4px" color="red">&nbsp;호오? 당신의 취업 운세가???</font></td>
+        </br>
+        </br>
+        <a href="sorry.html">&nbsp;&nbsp;&nbsp;&nbsp;확인</a>
+    </div>
+    <div id="shoppingads">
+
+    </div>
 
 
 </body>

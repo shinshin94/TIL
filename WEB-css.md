@@ -19,13 +19,13 @@
 >     * ```
 >        <head>	
 >        	<style>
->         
+>             
 >          	p{
->         
+>             
 >            	background-color: coral;
->         
+>             
 >           	}
->         
+>             
 >         		</style>
 >       </head>
 >
@@ -47,9 +47,9 @@
 >
 >   * ```
 >     pre{
->       
+>         
 >       text-align: center;
->       
+>         
 >     }
 >     ```
 >
@@ -57,9 +57,9 @@
 >
 >   * ```
 >     \#s-id01{
->       
+>         
 >       color: hotpink;
->       
+>         
 >     }
 >     ```
 >
@@ -67,11 +67,11 @@
 >
 >   * ```
 >     .s-cls01{
->       
+>         
 >       background-color: black;
->       
+>         
 >       color: white;
->       
+>         
 >     }
 >     ```
 >
@@ -79,9 +79,9 @@
 >
 >   * ```
 >     *{
->       
+>         
 >       text-align: right;
->       
+>         
 >     }
 >     ```
 >
@@ -89,9 +89,9 @@
 >
 >   * ```
 >     \#atc > p {
->       
+>         
 >       color:yellowgreen;
->       
+>         
 >     }
 >     ```
 >
@@ -99,9 +99,9 @@
 >
 >   * ```
 >     span+pre{
->       
+>         
 >       background-color: cornflowerblue;
->       
+>         
 >     }
 >     ```
 >
@@ -109,9 +109,9 @@
 >
 >   * ```
 >     \#atc02 span{
->       
+>         
 >       color:chocolate;
->       
+>         
 >     }
 >     ```
 >
@@ -119,9 +119,9 @@
 >
 >   * ```
 >     p[title]{
->       
+>         
 >       background-color: grey;
->       
+>         
 >     }
 >     ```
 >
@@ -133,11 +133,11 @@
 >
 >     * ```
 >       a:link{
->           
+>               
 >         color: green;
->           
+>               
 >         font-size: 20pt;
->           
+>               
 >       }
 >       ```
 >
@@ -147,9 +147,9 @@
 >
 >     * ```
 >       a:visited{
->           
+>               
 >         color: gold;
->           
+>               
 >       }
 >       ```
 >
@@ -159,11 +159,11 @@
 >
 >     * ```
 >       a:hover{
->           
+>               
 >         background-color: black;
->           
+>               
 >         color: white;
->           
+>               
 >       }
 >       ```
 >
@@ -173,11 +173,11 @@
 >
 >     * ```
 >       a:active{
->             
+>                   
 >         background-color: yellow;
->             
+>                   
 >         color:tomato;
->             
+>                   
 >       }
 >       ```
 >
@@ -264,7 +264,7 @@
 >   }
 >   	dd{
 >   	padding: 10px;
->   
+>     
 >   }
 >   ```
 
@@ -289,7 +289,7 @@
 >               			 # 그리고 다음 위치인 밑에 정렬됌
 >               background-color: gray;
 >               padding: 10px;
->   
+>     
 >           }
 >   ```
 
@@ -366,7 +366,7 @@
 >   	height: 100px;
 >   	text-align: center;
 >   	float: left;
->   	
+>   	  
 >   	border-radius: 50px 50px 50px 50px; #왼쪽위부터 시계방향으로  곡률을 줌
 >   	color: yellow;
 >   	font-size: 50px;
