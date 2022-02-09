@@ -15,7 +15,7 @@
 
 서버로 요청
 
-request(Get	,	post)					`get request header에 data를 담아서 전송 (queryString)`
+request(Get,post)					`get request header에 data를 담아서 전송 (queryString)`
 
 ​				⬆헤더 ⬆바디 저장   	`post body에 내용을 숨겨서 가져감`
 
@@ -98,19 +98,43 @@ Hello,wordl! 해당 태그에 적용될 내용
 
 ## 블록요소 Block_inline
 
+기본적으로 **가로폭 전체의 넓이를 가지는 직사각형 형태**가 되며 `width`, `height`, `margin`, `padding` 등을 사용하여 형태를 변형하여 레이아웃을 수정이 가능합닌다.
+
 줄 바꿈
 
 블록 요소 안에 텍스트 /인라인 요소 포함가능
 
 블록 요소 안에 블록 요소 포함 가능
 
+* 종류
+
+```
+address, article, aside, audio, blockquote, canvas, dd, div, dl, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, noscript, ol, output, p, pre, section, table, ul, video
+```
+
+
+
 ## 인라인 inline
+
+항상 블록 요소안에 포함되어 있음
+
+인라인 요소가 끝나는 지점까지가 넓이(`width`,`height`같은 블록요소 사용 불가)
+
+`line-height`로 줄의 높낮이를 조절할 수 있고 `text-align`으로 텍스트의 중앙, 좌,우측 정렬은 가능
 
 줄 바꿈 없음
 
 인라인 요소 안에 텍스트 /인라인 요소 포함가능
 
 인라인 요소 안에 블록 요소 포함 불가
+
+* 종류
+
+```
+a, abbr, acronym,area, b, bdo, big, br, button, cite, code, dfn, em, i, img, input, kbd, label, map, object, q, samp, small, script, select, span, strong, sub, sup, textarea, tt, var
+```
+
+
 
 live server
 
@@ -133,6 +157,8 @@ http://     #통신규약
 
 
 ## text
+
+*  인라인 요소입니다.
 
 `<b>진하게</b>`
 `<strong>진하게</strong>`
@@ -160,6 +186,8 @@ http://     #통신규약
 
 `<a href='#a'>1번</a>` 뒤에 주소를 줘서 특정한곳으로 이동
 
+위에는 id가 a인곳으로 보내는것
+
 ## list
 
 ``` 
@@ -171,22 +199,22 @@ http://     #통신규약
         <li>침대에서 나온다</li>	#2
         <li>씻는다.		#3이 붙음
             <ol>
-                <li>양치한다</li>	#3이 포함하는 순차적 목록 1
+                <li>양치한다</li>	#씻는다가 포함하는 순차적 목록 1
                 <li>머리감는다</li>	#2
                 <li>샤워한다</li>	#3
             </ol>			
         </li>				
-        <li>옷입는다</li>	#다시 큰 순차로 4
-        <li>출발한다</li>	#다시 큰 순차로 5
+        <li>옷입는다</li>	#씻는다에서 연결되는 순차로 4번임
+        <li>출발한다</li>	#5
     </ol>
     <h2>비 순차적 목록</h2>
     <ul>
         점심고르기
-        <li>굶는다</li>	.으로 표현
+        <li>굶는다</li>	.으로 표현 마크다운에서 * 로 순차표시와 같음
         <li>짜파게티</li>
         <li>편의점
             <ul>
-                <li>불닭 + 치즈볶</li>	빈점으로 표현
+                <li>불닭 + 치즈볶</li>	빈점으로 표현 마크다운 *에서 탭쓴놈이랑 같음
                 <li>도시락</li>	
                 <li>컵라면</li>
                 <li>삼각김밥</li>
@@ -220,8 +248,63 @@ http://     #통신규약
             </dl>
         </dd>
 ```
+---
+# list 내용의 화면입니다. ⬇
+# 목록
+
+## 순차적 목록
+
+1. 학원 오는 순서
+
+2. 눈을 뜬다
+3. 침대에서 나온다
+4. 씻는다.
+   1. 양치한다
+   2. 머리감는다
+   3. 샤워한다
+5. 옷입는다
+6. 출발한다
+
+## 비 순차적 목록
+
+- 점심고르기
+
+- 굶는다
+- 짜파게티
+- 편의점
+  - 불닭 + 치즈볶
+  - 도시락
+  - 컵라면
+  - 삼각김밥
+  - 샌드위치
+
+## 정의형 목록
+
+- 제목
+
+  내용
+
+- ds/de 커리큘럼
+
+  python
+
+  numpy / pandas
+
+  html css js jq
+
+  django
+
+  crawling / visulization
+
+  dsmldl...demlhadoop/spark
+  
+  
+
+
 
 ---
+
+# list 화면 끝⬆
 
 ## TABLE
 
@@ -320,7 +403,8 @@ http://     #통신규약
 ## form
 
 ```
-<form action="html-form-res.html" method="post"> #action 에 있는 경로 저장=> submit시 폼 속성안에 있는 네임값과 벨류값을 저장해서 보내짐
+<form action="html-form-res.html" method="post">
+#action 에 있는 경로 저장=> submit시 폼 속성안에 있는 네임에 해당하는 value 값을 저장해서 보내짐
         <fieldset>
             <legend>회원가입</legend>
 
