@@ -19,13 +19,13 @@
 >     * ```
 >        <head>	
 >        	<style>
->                 
+>     
 >          	p{
->                 
+>     
 >            	background-color: coral;
->                 
+>     
 >           	}
->                 
+>     
 >         		</style>
 >       </head>
 >
@@ -40,6 +40,9 @@
 >       	<link rel="stylesheet" href="resources/css/css01.css" 			type="text/css"/>
 >       </head>
 >       ```
+>       
+>       * 외부에서 스타일을 지정한것을 끌어서 씁니다.
+>       * href로 외부에서 만든 스타일의 경로를 입력해줍니다,
 
 ## selector 선택자
 
@@ -56,7 +59,7 @@
 > * id
 >
 >   * ```
->     \#s-id01{
+>     #s-id01{
 >           
 >       color: hotpink;
 >           
@@ -254,23 +257,25 @@
 >   	width: 600px;
 >   	border: 3px #123456 double;
 >   }
+>   #클래스 박스를 크기 가로 600px 지정 굵기는 3px더블라인
 >   dt{
->   	background: #abcdef;
->   	text-align: center;
->   	font-size: 20px;
->   	letter-spacing: 15px;
->   	padding: 15px;   #안쪽 영역
->   	border-bottom: #123456 5px double;
+>   	background: #abcdef;	#배경색
+>   	text-align: center;		#텍스트 정렬
+>   	font-size: 20px;		#폰트 사이즈
+>   	letter-spacing: 15px;	#글자 사이 간격
+>   	padding: 15px;   #안쪽 영역 지정 콘텐츠와 테두리 사이 공간
+>   	#padding은 위 오른쪽 아래 왼쪽 순서
+>   	border-bottom: #123456 5px double;	#요소의 아래쪽테두리
 >   }
 >   	dd{
 >   	padding: 10px;
->       
+>   
 >   }
 >   ```
 
   ## float
 
-> * 방향을 정하고 그쪽으로 정렬 그리고 남는부분은 다른것으로 채워짐
+> * 방향을 정하고 그쪽으로 정렬 그리고 남는부분은 다음에 올 내용으로 채워짐
 >
 > * ```
 >   p span{
@@ -323,7 +328,7 @@
 
 > * relative
 >
->   * 원래 자신의 위치에서 얼마나 움직이는지 위치 지정
+>   * 자기 자신을 기준으로 원래 자신의 위치에서 얼마나 움직이는지 위치 지정
 >
 > * absolute
 >
@@ -367,7 +372,7 @@
 >   	text-align: center;
 >   	float: left;
 >   	    
->   	border-radius: 50px 50px 50px 50px; #왼쪽위부터 시계방향으로  곡률을 줌
+>   	border-radius: 50px 50px 50px 50px; #순서는 왼쪽위부터 시계방향으로  곡률을 줌, 1개만 적혀있을시 전부 같은값 지정 2개일시 대칭되게 지정
 >   	color: yellow;
 >   	font-size: 50px;
 >   }
@@ -406,7 +411,7 @@
 >
 >   * ```
 >     #trotate{
->     	transform: rotate(30deg);
+>     	transform: rotate(30deg); #30도 돌림
 >     }
 >     ```
 >
@@ -416,7 +421,7 @@
 >
 >   * ```
 >     #tscale{
->     	transform: scale(0.5,0.5);
+>     	transform: scale(0.5,0.5); #원래상태 기준에서 크기 지정해줌 확대 축소 개념
 >     }
 >     ```
 >
@@ -428,13 +433,13 @@
 >
 >   * ```
 >     #tskew{
->     	transform: skew(20deg,10deg);
+>     	transform: skew(20deg,10deg); #기울기입니다. 가로,세로
 >     }
 >     ```
 >
 > * transition
 >
->   * 속성 전환
+>   * 속성 전환 /애니메이션 효과
 >
 >   * ```
 >     #tran{
