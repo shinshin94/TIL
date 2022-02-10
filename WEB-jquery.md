@@ -36,7 +36,7 @@
 >     	$("#test-btn").click(function(){
 >     		alert("클릭했음!!");
 >     	});
->             
+>               
 >     	$("img").click(function(){
 >     		$(this).hide();
 >     	});
@@ -511,7 +511,7 @@
 >     	<b>first() : 선택한 엘리먼트들 중에 첫번째 요소</b>
 >     	<b>last() : 선택한 엘리먼트들 중에 마지막 요소</b>
 >     </pre>
->         
+>           
 >     <div>
 >     	<p>eq()</p>
 >     	<p>slice</p>
@@ -575,7 +575,7 @@
 >     	<b>parent() / parents("selector") : 선택한 엘리먼트의 부모 / 조상 탐색</b>
 >     	<b>next("selector") : 선택한 엘리먼트 다음에 따라오는 요소 탐색</b>       
 >     </pre>
->         
+>           
 >     <div>
 >     	<p><b>1</b></p>
 >     	<p id="chd">2</p>
@@ -627,7 +627,7 @@
 >   * ```
 >     $(function(){
 >     	$("p:eq(0)").add("span").css("color","red")
->             
+>                 
 >     	$("div").children().click(function(){
 >     		if($(this).prop("tagName")=="SPAN"){
 >     			alert("span tag click!!!");
@@ -666,7 +666,7 @@
 >    	<div>.first()</div>
 >    	<div>.last()</div>
 >    	</div>
->          
+>             
 >    <div id="menu2" class="menu">
 >    	<a href="#b">트리 탐색 메서드</a>
 >    	<div>.find()</div>
@@ -674,7 +674,7 @@
 >    	<div>.parent()</div>
 >    	<div>.next()</div>
 >    </div>
->          
+>             
 >    <div id="menu3" class="menu">
 >    	<a href="#c">탐색 메서드</a>
 >    	<div>.add()</div>
@@ -739,7 +739,7 @@
 >     	</p>
 >     	<p>클릭</p>
 >     </div>
->         
+>           
 >     <div>
 >     	<p>
 >     		<a href="http://www.google.com">클릭!</a>
@@ -778,7 +778,7 @@
 >     		"mouseout":function(){
 >     			$(this).css("color","");
 >     		}
->             
+>                 
 >     	});
 >     ```
 >
@@ -906,7 +906,7 @@
 >     	$("#btn").click(function(){
 >     		$("img").toggleClass("onoff")
 >     	})
->         
+>             
 >     	$("img").click(function(){
 >     		if($(this).hasClass("addsize")){
 >     			$(this).removeClass("addsize").attr("title","이미지 축소됨");
@@ -969,13 +969,13 @@
 >         <button>append</button>  1️⃣
 >         <button>html</button>    2️⃣
 >         <button>txt</button>     3️⃣
->             
+>                 
 >         0️⃣
 >         <div>
 >            2️⃣ <p>내부 삽입1</p>  3️⃣
 >            2️⃣ <p>내부 삽입2</p>  3️⃣
 >         </div>
->             
+>                 
 >         1️⃣
 >     </body>
 >     ```
@@ -1150,7 +1150,7 @@
 >   * ```
 >     <div id="menubox">
 >     	<div class="sel"></div>
->         
+>             
 >     	<div id="menu">
 >     		<img src="resources/imgs/img01.png" alt="img01"/>
 >     		<img src="resources/imgs/img02.png" alt="img02"/>
@@ -1159,7 +1159,7 @@
 >     		<img src="resources/imgs/img05.png" alt="img05"/>
 >     		<img src="resources/imgs/img06.png" alt="img06"/>
 >     	</div>
->         
+>             
 >     <button>start</button>
 >     ```
 >
@@ -1255,12 +1255,12 @@
 >     	$("p:eq(0)").click(function(){
 >     		$(this).remove();
 >     	})
->       
+>         
 >     	$("p:eq(1)").click(function(){
 >     		var ele = $(this).detach();
 >     		$("h1").append(ele);
 >     	})
->       
+>         
 >     	$("p:eq(2)").click(function(){
 >     		$(this).parent().empty();
 >     	})
@@ -1296,11 +1296,11 @@
 >
 > 1. url  :통신할 경로(주소) ✅
 >
-> 2. method : 전송 방식(get(default) /post)
+> 2. method : 전송 방식(get(default) /post)✅
 >
-> 3. async : 비동기(defalut)/동기
+> 3. async : 비동기(defalut)/동기✅
 >
-> 4. dataType : 전송받을 데이터의 타입(xml,json,html,script,...) 
+> 4. dataType : 전송받을 데이터의 타입(xml,json,html,script,...) ✅
 >
 > 5. data:{"key":value},  : 전송할 데이터
 >
@@ -1349,7 +1349,7 @@
 >     					alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
 >     				}
 >     			})
->       
+>         
 >     		} else{
 >     			alert("사원번호를 다시 확인해주세요")
 >     		}
@@ -1495,7 +1495,7 @@
 >     ```
 >
 >        					1. 만약 ele가 <p>hide</P>를 선택한 것이라면
->                					1. 이미지를 숨깁니다.
+>        	       					1. 이미지를 숨깁니다.
 >
 >   * ```
 >             if(ele.is("p:contains(show)")){
@@ -1587,7 +1587,7 @@
 >                 	"top":"0px"
 >                 },2000)
 >             }
->     	})
+>       	})
 >     })
 >     ```
 >
