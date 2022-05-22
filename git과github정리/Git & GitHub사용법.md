@@ -35,24 +35,47 @@
 >
 > * git --version
 >   * 현재 설치된 git의 버젼 및 os를 나타내줍니다.
+>
 > * git config --global user.name shinshin94
 >   * global
 >     * 컴퓨터 전체에서 동일한 옵션을 적용하려고 설정
 >   * user.name <id>
 >     * 자신의 GitHub 유저명을 지정줍니다.
+>
 > * git config --global user.email aodvl2@gmail.com
+>
 > * cd <연동할 폴더 위치>
+>
 > * git clone https://github.com/shinshin94/TIL.git
+>
 >   * 만들어둔 GitHub repository 를 복사하여 주소에 있는 내용들을 가져옵니다
 >   * 컴퓨터의 git을 local repository라고 부름 ( github 주소는 원격지(리모트) repository )
+>
 > * git add <변경된 파일명>
+>
+>   * git add .
+>     * 해당 위치의 전체를 선택합니다.
+>
 > * git commit -m "git과 github 복습1"
+>
 >   * -m 뒤에는 github에 올릴시 표시를 위한 짧은 메세지를 넣어줍니다.
+>
 > * git push
+>
 >   * github에 업로드 합니다.
+>
 > * 순서 
+>
 >   1. 저장소에 파일의 변동이 생김
 >   2. 변동된 파일을 `git add <변경된 파일명>`
 >   3. `git commit -m "짧은 메세지"` 로 변동 사항을 짧게 요약해서 넣어줌
 >   4. `git push` 를 사용하여 github에 업로드
+>
+> * Error
+>
+>   * ```
+>     warning: LF will be replaced by CRLF in git과github정리/Git & GitHub사용법.md. The file will have its original line endings in your working directory
+>     ```
+>
+>     * 혹시 다음과 같은 에러가 뜰시 윈도우는 `git config --global core.autocrlf true` 를 입력해주면 된다.
 
